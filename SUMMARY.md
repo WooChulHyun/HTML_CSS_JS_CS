@@ -10,11 +10,11 @@
 
     -   [test](docs/CSS/test.md)
 
--   [JS](docs/JavaScript/index.md)
+-   [JavaScript](docs/JavaScript/index.md)
 
     -   [test](docs/JavaScript/test.md)
 
--   [CS](docs/Computer_science/index.md)
+-   [Computer Science](docs/Computer_science/index.md)
 
     -   [test](docs/Computer_Science/test.md)
 
