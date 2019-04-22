@@ -1,0 +1,27 @@
+{
+    "title": "HTML CSS JS CS",
+    "description": "HTML CSS JS CS 정리",
+    "author": "Woochul Hyun",
+    "language": "en, ko",
+    "root": ".",
+
+    "links": {
+        "sidebar": {
+            "GitHub": "https://github.com/WooChulHyun"
+        }
+    },
+    "plugins": ["-sharing", "-fontsettings", "toggle-chapters"],
+    "pluginsConfig": {
+        "sharing": {
+            "facebook": false,
+            "twitter": false,
+            "google": false,
+            "all": ["facebook", "google", "twitter"]
+        },
+        "fontsettings": {
+            "theme": "white",
+            "family": "sans",
+            "size": 2
+        }
+    }
+}
