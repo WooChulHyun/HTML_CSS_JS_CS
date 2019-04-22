@@ -14,7 +14,7 @@
 
     -   [test](docs/JavaScript/test.md)
 
--   [Computer Science](docs/Computer_science/index.md)
+-   [Computer Science](docs/Computer_Science/index.md)
 
     -   [test](docs/Computer_Science/test.md)
 
