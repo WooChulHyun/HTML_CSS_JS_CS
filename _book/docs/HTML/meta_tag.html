@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>HTML · HTML CSS JS CS</title>
+        <title>meta Tag · HTML CSS JS CS</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="useful_website.html" />
+    <link rel="next" href="../CSS/" />
     
     
-    <link rel="prev" href="../../" />
+    <link rel="prev" href="useful_website.html" />
     
 
     </head>
@@ -103,7 +103,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2" data-path="./">
+        <li class="chapter " data-level="1.2" data-path="./">
             
                 <a href="./">
             
@@ -130,7 +130,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.2" data-path="meta_tag.html">
+        <li class="chapter active" data-level="1.2.2" data-path="meta_tag.html">
             
                 <a href="meta_tag.html">
             
@@ -306,7 +306,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >HTML</a>
+        <a href="../.." >meta Tag</a>
     </h1>
 </div>
 
@@ -321,8 +321,138 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="html">HTML</h1>
-<p><img width="400px" src="https://i.postimg.cc/xjWyQRS7/HTML-Logo.png" alt="HTM" title="Logo HTML" style="display:block; margin: 0 auto; margin-top:100px"></p>
+                                <h1 id="meta-tag">meta Tag</h1>
+<h3 id="character-code-set-meta-charset--utf-8">Character code set <code>&lt;meta charset = &quot;utf-8&quot;&gt;</code></h3>
+<hr>
+
+<p>This meta tag must be placed before <code>&lt;title&gt;</code>, and rest of all meta tags can be placed whether before or after the <code>&lt;title&gt;</code>.
+<br>
+<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot; /&gt;
+        &lt;title&gt;Page Title&lt;/title&gt;
+</code></pre><p><br>
+<br></p>
+<h3 id="meta-name"><code>&lt;meta name=&quot;&quot;&gt;</code></h3>
+<hr>
+
+<ul>
+<li><p><code>&lt;meta name = &quot;keywords&quot; content=&quot;keyword1, keyword2&gt;</code></p>
+<ul>
+<li>Enter the &quot;keyword&quot; in &quot;content&quot; by &quot;,&quot;.</li>
+</ul>
+</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><code>&lt;meta name=&quot;description&quot; content=&quot;A description of the page&quot;&gt;</code> (Important for SEO)</p>
+<ul>
+<li><p>This tag provides a short description of this page (when you are searching in Google, so provide different description for each page)</p>
+</li>
+<li><p>Ex) <code>&lt;meta name=&quot;Description&quot; CONTENT=&quot;author: name, category: Book, Price: $10.25, pages: 500pages&quot;&gt;</code></p>
+</li>
+<li><p>Featured snippets in search: <a href="https://support.google.com/webmasters/answer/6229325?hl=en" target="_blank">https://support.google.com/webmasters/answer/6229325?hl=en</a></p>
+</li>
+<li><p>Create good titles and snippets in Search Results: <a href="https://support.google.com/webmasters/answer/35624?hl=en" target="_blank">https://support.google.com/webmasters/answer/35624?hl=en</a></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="robots-meta-tag-meta-namerobots-contentall">Robots meta tag <code>&lt;meta name=&quot;robots&quot; content=&quot;all&quot;&gt;</code></h3>
+<hr>
+
+<p>Not valid for all search engines.</p>
+<ul>
+<li><p>content = &quot;&quot;</p>
+<ul>
+<li><p>all: default. Same as specifying &apos;index, follow&apos;.</p>
+</li>
+<li><p>none: Same as specifying &apos;noindex, nofollow&apos;.</p>
+</li>
+<li><p>index: The page is targeted for collection.</p>
+</li>
+<li><p>follow: The page and where the link is located are targeted for collection.</p>
+</li>
+<li><p>noindex: Exclude the page from collection.</p>
+</li>
+<li><p>nofollow: Exclude the page and where the link is located from collection.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="robots-meta-tag-meta-property">Robots meta tag <code>&lt;meta property=&quot;&quot;&gt;</code></h3>
+<hr>
+
+<p>Detailed settings to show the link in various socials such as Open Graph, KakaoTalk, etc.</p>
+<ul>
+<li><p><code>&lt;meta property=&quot;og:title&quot; content=&quot;Page Title&quot;&gt;</code></p>
+<ul>
+<li>&#xC6B0;&#xCCB4;&#xAD6D; EMS &#xC694;&#xAE08;, &#xAD6D;&#xC81C;&#xD0DD;&#xBC30; &#xAC00;&#xACA9;&#xD45C; :)</li>
+</ul>
+</li>
+<li><p><code>&lt;meta property=&quot;og:url&quot; content=&quot;http://site URL/&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta property=&quot;og:image&quot; content=&quot;http://be displayed image&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta property=&quot;og:image:width&quot; content=&quot;200&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta property=&quot;og:image:heigth&quot; content=&quot;200&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta property=&quot;og:image:type&quot; content=&quot;image/jpeg&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta property=&quot;og:type&quot; content=&quot;website&quot;&gt;</code></p>
+<ul>
+<li>ex) website, article, etc.</li>
+</ul>
+</li>
+<li><p><code>&lt;meta property=&quot;og:description&quot; content=&quot;site description&quot;&gt;</code></p>
+<ul>
+<li>&#xD55C;&#xAD6D;&#xC5D0;&#xC11C; &#xD30C;&#xB9AC;&#xB85C; &#xD0DD;&#xBC30; &#xBD99;&#xD790;&#xC77C;&#xC774; &#xB354; &#xB9CE;&#xC774; &#xC0DD;&#xAE38; &#xAC83;&#x2026;&#x2026;</li>
+</ul>
+</li>
+</ul>
+<p>Example picture</p>
+<p><img width="400px" src="https://i.postimg.cc/NFFGq7J0/meta-property-og.png" alt="HTM" title="Logo HTML"></p>
+<h3 id="other-useful-meta-tags">Other useful meta tags</h3>
+<hr>
+
+<ul>
+<li><p><code>&lt;meta name=&quot;author&quot; content=&quot;Woochul Hyun&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta name=&quot;generator&quot; content=&quot;what framework you used&quot;&gt;</code></p>
+<ul>
+<li>ex) bootstrap, wordpress</li>
+</ul>
+</li>
+<li><p><code>&lt;meta name=&quot;copyright&quot; content=&quot;(c)abc.com&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta name=&quot;reply-to&quot; content=&quot;abc@gmail.com&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta name=&quot;date&quot; content=&quot;2019-04-23T17:54:00+09:00&quot;&gt;</code></p>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;</code></p>
+<ul>
+<li>to make latest version of explorer be applied</li>
+</ul>
+</li>
+<li><p><code>&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,initial-scale=1&quot;&gt;</code></p>
+<ul>
+<li>for Responsive website</li>
+</ul>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10&#x201D;&gt;</code></p>
+<ul>
+<li>Site is going to be updated at every specified times (here 10sec)</li>
+</ul>
+</li>
+<li><p><code>&lt;meta http-equiv=&quot;refresh&quot; content=&quot;10; url=http://example.com/&quot;&gt;</code></p>
+<ul>
+<li>after the certain period of time (here 10sec), site will be redirected to example site (useful tag when you are checking, fixing your site)</li>
+</ul>
+</li>
+</ul>
 
                                 
                                 </section>
@@ -350,12 +480,12 @@
 
             
                 
-                <a href="../../" class="navigation navigation-prev " aria-label="Previous page: Introduction">
+                <a href="useful_website.html" class="navigation navigation-prev " aria-label="Previous page: Useful Website">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="useful_website.html" class="navigation navigation-next " aria-label="Next page: Useful Website">
+                <a href="../CSS/" class="navigation navigation-next " aria-label="Next page: CSS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -366,7 +496,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"HTML","level":"1.2","depth":1,"next":{"title":"Useful Website","level":"1.2.1","depth":2,"path":"docs/HTML/useful_website.md","ref":"docs/HTML/useful_website.md","articles":[]},"previous":{"title":"Introduction","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTML CSS JS CS","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/index.md","mtime":"2019-04-22T11:10:16.259Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T07:30:45.655Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"meta Tag","level":"1.2.2","depth":2,"next":{"title":"CSS","level":"1.3","depth":1,"path":"docs/CSS/index.md","ref":"docs/CSS/index.md","articles":[{"title":"test","level":"1.3.1","depth":2,"path":"docs/CSS/test.md","ref":"docs/CSS/test.md","articles":[]}]},"previous":{"title":"Useful Website","level":"1.2.1","depth":2,"path":"docs/HTML/useful_website.md","ref":"docs/HTML/useful_website.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"HTML CSS JS CS","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/meta_tag.md","mtime":"2019-04-23T09:21:18.609Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-23T07:30:45.655Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
