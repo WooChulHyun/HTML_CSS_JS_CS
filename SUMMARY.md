@@ -19,6 +19,14 @@
 
     -   [test](docs/Computer_Science/test.md)
 
+-   [GitHub](docs/GitHub/index.md)
+
+    -   [test](docs/GitHub/test.md)
+
+-   [VSCode](docs/VSCode/index.md)
+
+    -   [test](docs/VSCode/test.md)
+
 -   [GitBook](docs/GitBook/index.md)
 
     -   [test](docs/GitBook/test.md)
