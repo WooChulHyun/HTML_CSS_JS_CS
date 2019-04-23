@@ -4,12 +4,18 @@
     "author": "Woochul Hyun",
     "language": "en, ko",
     "root": ".",
-
+    "structure": {
+        "summary": "SUMMARY.md"
+    },
     "links": {
         "sidebar": {
             "GitHub": "https://github.com/WooChulHyun"
         }
     },
+    "styles": {
+        "website": "styles/website.css"
+    },
+
     "plugins": ["-sharing", "-fontsettings", "toggle-chapters"],
     "pluginsConfig": {
         "sharing": {
