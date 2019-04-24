@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>abbr, dfn, cite, small · Web Development Book</title>
+        <title>Quotation · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="ruby_tag.html" />
+    <link rel="next" href="../CSS/" />
     
     
-    <link rel="prev" href="text_tag.html" />
+    <link rel="prev" href="address.html" />
     
 
     </head>
@@ -195,7 +195,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.2.7" data-path="abbr_dfn_cite_small.html">
+        <li class="chapter " data-level="1.2.7" data-path="abbr_dfn_cite_small.html">
             
                 <a href="abbr_dfn_cite_small.html">
             
@@ -247,7 +247,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.11" data-path="quotation.html">
+        <li class="chapter active" data-level="1.2.11" data-path="quotation.html">
             
                 <a href="quotation.html">
             
@@ -487,7 +487,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >abbr, dfn, cite, small</a>
+        <a href="../.." >Quotation</a>
     </h1>
 </div>
 
@@ -502,68 +502,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="abbr-dfn-cite-small">abbr, dfn, cite, small</h1>
-<h3 id="abbr">abbr</h3>
+                                <h1 id="quotation">quotation</h1>
+<h3 id="blockquote">blockquote</h3>
 <hr>
 
-<p><code>&lt;abbr&gt;</code> represents an abbreviation or acronym, optionally representing its extension. You can use the &quot;title&quot; attribute to indicate the original words of abbreviation. When using &quot;title&quot; attributes, only the original words of the abbreviation should be included.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>abbr element<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Web Hypertext Application Technology Working Group&quot;</span>
-        &gt;</span>WHATWG<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>
-    &gt;</span>
-    is a community of people interested in evolving HTML and related
-    technologies. The WHATWG was founded by individuals from Apple Inc., the
-    Mozilla Foundation and Opera Software, leading Web browser vendors, in 2004.
-    Since then, the editor of the WHATWG specifications, Ian Hickson (originally
-    with Opera), has moved to Google.
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    HTML5 is a
-    <span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;World Wide Web Consortium&quot;</span>&gt;</span>W3C<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span> Recommendation
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<p>Used to define as block-level quotation. The <code>&lt;blockquote&gt;</code> is a block-level element, but it must contain other block-level elements such as <code>&lt;p&gt;</code>, not directly inline elements and text. You can specify the URI where quoted with cite attribute or use the title attribute to specify the title of the quote.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;HTML is... (description)&quot;</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        HTML stands for Hyper Text Markup Language<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+        HTML is the standard markup language for Web pages
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        HTML elements are the building blocks of HTML pages<span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>
+        HTML elements are represented by &amp;lt;&amp;gt; tags
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>
+        source:
+        <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>
+            &gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;https://www.w3schools.com/whatis/whatis_html.asp&quot;</span>&gt;</span>
+                W3schools.com (website title) &amp;gt; What is HTML? (child page
+                title)<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>
+            &gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>
+        &gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span>
 </code></pre>
-<p><img src="https://i.postimg.cc/QdJqxxc9/abbr.png"></p>
-<h3 id="dfn">dfn</h3>
+<p><img src="https://i.postimg.cc/CLsQhLW6/blockquote.png"></p>
+<h3 id="q">q</h3>
 <hr>
 
-<p><code>&lt;dfn&gt;</code> represents the definition of a word. The closest ancestor element of a <code>&lt;dfn&gt;</code> (ex. A paragraph, a definition list group, a section) must contain a description of the word given in the dfn element.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>dfn element<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">abbr</span> <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Hypertext Markup Language&quot;</span>&gt;</span>html<span class="hljs-tag">&lt;/<span class="hljs-name">abbr</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">dfn</span>
-        <span class="hljs-attr">title</span>=<span class="hljs-string">&quot;Hypertext Markup Language, a standardized system for taggintext files to achieve font, color, graphic, and hyperlink effects oWorld Wide Web pages.&quot;</span>
-        &gt;</span>html<span class="hljs-tag">&lt;/<span class="hljs-name">dfn</span>
-    &gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<p>Use <code>&lt;q&gt;</code> tag when quoting is required in inline</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Socrates said <span class="hljs-tag">&lt;<span class="hljs-name">q</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">&quot;www.example.com&quot;</span>&gt;</span>Know yourself<span class="hljs-tag">&lt;/<span class="hljs-name">q</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
 </code></pre>
-<p><img src="https://i.postimg.cc/0ykwnGJj/dfn.png"></p>
-<h3 id="cite">cite</h3>
-<hr>
-
-<p><code>&lt;cite&gt;</code> represents the title of any work. Works are, for example, books, essays, poems, scores, songs, scripts, films, TV shows, games, statues, paintings, movies, plays, operas, musicals and exhibitions. You may have cited works, citation detailedly, or just briefly mentioned them.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>cite element<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">ol</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>moves like jagger<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span> Maroon 5<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span>hey jude<span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span> Beatles<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
-</code></pre>
-<p><img src="https://i.postimg.cc/hPFwXvQp/cite.png"></p>
-<h3 id="small">small</h3>
-<hr>
-
-<p><code>&lt;small&gt;</code> represents a side comment, such as a small print.</p>
-<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>small element<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
-
-<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
-    The price of 1 box of apples is 20 dollars
-    <span class="hljs-tag">&lt;<span class="hljs-name">small</span>&gt;</span>(tax not included in price)<span class="hljs-tag">&lt;/<span class="hljs-name">small</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
-</code></pre>
-<p><img src="https://i.postimg.cc/xTxzsJGP/small.png"></p>
+<p><img src="https://i.postimg.cc/vHb0Nwc7/q.png"></p>
 
                                 
                                 </section>
@@ -591,12 +562,12 @@
 
             
                 
-                <a href="text_tag.html" class="navigation navigation-prev " aria-label="Previous page: Text Tags">
+                <a href="address.html" class="navigation navigation-prev " aria-label="Previous page: address">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="ruby_tag.html" class="navigation navigation-next " aria-label="Next page: ruby Tag">
+                <a href="../CSS/" class="navigation navigation-next " aria-label="Next page: CSS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -607,7 +578,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"abbr, dfn, cite, small","level":"1.2.7","depth":2,"next":{"title":"ruby Tag","level":"1.2.8","depth":2,"path":"docs/HTML/ruby_tag.md","ref":"docs/HTML/ruby_tag.md","articles":[]},"previous":{"title":"Text Tags","level":"1.2.6","depth":2,"path":"docs/HTML/text_tag.md","ref":"docs/HTML/text_tag.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/abbr_dfn_cite_small.md","mtime":"2019-04-24T11:53:41.804Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T12:20:45.010Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Quotation","level":"1.2.11","depth":2,"next":{"title":"CSS","level":"1.3","depth":1,"path":"docs/CSS/index.md","ref":"docs/CSS/index.md","articles":[{"title":"test","level":"1.3.1","depth":2,"path":"docs/CSS/test.md","ref":"docs/CSS/test.md","articles":[]}]},"previous":{"title":"address","level":"1.2.10","depth":2,"path":"docs/HTML/address.md","ref":"docs/HTML/address.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/quotation.md","mtime":"2019-04-24T12:20:40.542Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T12:20:45.010Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
