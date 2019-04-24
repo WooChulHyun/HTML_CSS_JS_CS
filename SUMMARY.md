@@ -9,6 +9,8 @@
 
     -   [Block, Inline Elements](docs/HTML/block_inline_elements.md)
     -   [Character Entity References](docs/HTML/character_entity_references.md)
+    -   [Syntax Highlighting](docs/HTML/syntax_highlighting.md)
+    -   [Text Tags](docs/HTML/text_tag.md)
 
 -   [CSS](docs/CSS/index.md)
 
