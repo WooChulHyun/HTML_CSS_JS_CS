@@ -6,11 +6,11 @@
 
     -   [Useful Website](docs/HTML/useful_website.md)
     -   [meta Tag](docs/HTML/meta_tag.md)
-
     -   [Block, Inline Elements](docs/HTML/block_inline_elements.md)
     -   [Character Entity References](docs/HTML/character_entity_references.md)
     -   [Syntax Highlighting](docs/HTML/syntax_highlighting.md)
     -   [Text Tags](docs/HTML/text_tag.md)
+    -   [abbr, dfn, cite, small](docs/HTML/abbr_dfn_cite_small.md)
 
 -   [CSS](docs/CSS/index.md)
 
