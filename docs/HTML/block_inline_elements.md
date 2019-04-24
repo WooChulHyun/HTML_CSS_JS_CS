@@ -3,5 +3,3 @@
 ### Block Elements
 
 <hr>
-
-|`<address>`|`<article>`|`<aside>`|||
