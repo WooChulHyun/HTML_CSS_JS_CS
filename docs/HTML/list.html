@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Useful Website · Web Development Book</title>
+        <title>List · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="meta_tag.html" />
+    <link rel="next" href="../CSS/" />
     
     
-    <link rel="prev" href="./" />
+    <link rel="prev" href="pre.html" />
     
 
     </head>
@@ -117,7 +117,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.2.1" data-path="useful_website.html">
+        <li class="chapter " data-level="1.2.1" data-path="useful_website.html">
             
                 <a href="useful_website.html">
             
@@ -273,7 +273,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.13" data-path="list.html">
+        <li class="chapter active" data-level="1.2.13" data-path="list.html">
             
                 <a href="list.html">
             
@@ -513,7 +513,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Useful Website</a>
+        <a href="../.." >List</a>
     </h1>
 </div>
 
@@ -528,42 +528,76 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="useful-website">Useful website</h1>
-<h3 id="html5-shiv">HTML5 Shiv</h3>
+                                <h1 id="list">List</h1>
+<h3 id="ul-ol-li">ul, ol, li</h3>
 <hr>
 
-<p><a href="https://github.com/aFarkas/html5shiv" target="_blank">https://github.com/aFarkas/html5shiv</a></p>
-<blockquote>
-<p>The HTML5 Shiv enables use of HTML5 sectioning elements in legacy Internet Explorer and provides basic HTML5 styling for Internet Explorer 6-9, Safari 4.x (and iPhone 3.x), and Firefox 3.x.
-<em>(HTML5 Shive GitHub page)</em></p>
-</blockquote>
-<h3 id="markup-validation">Markup Validation</h3>
+<p>In general, <code>&lt;ul&gt;</code>(unordered list) and <code>&lt;ol&gt;</code>(ordered list) tags are used to make list, and each item defines as <code>&lt;li&gt;</code>(list item).</p>
+<p>Both <code>&lt;ul&gt;</code> and <code>&lt;ol&gt;</code> are block-level elements, but can not contain elements other than the <code>&lt;li&gt;</code>. The <code>&lt;li&gt;</code> is a block-level element that can contain inline elements and text, and can contain other block-level elements.</p>
+<h3 id="example">Example</h3>
 <hr>
 
-<p><a href="https://validator.w3.org/" target="_blank">https://validator.w3.org/</a></p>
-<blockquote>
-<p>This validator checks the markup validity of Web documents in HTML, XHTML, SMIL, MathML, etc. If you wish to validate specific content such as RSS/Atom feeds or CSS stylesheets, MobileOK content, or to find broken links, there are other validators and tools available. As an alternative you can also try our non-DTD-based validator.
-<em>(W3C)</em></p>
-</blockquote>
-<h3 id="formspree">FORMSPREE</h3>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Types of Cars<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        Small Cars
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Ford Focus<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Kia Rio<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Chevrolet Cruze<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        Compact Cars
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nissan Versa.<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Nissan Sentra<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Midsize Car<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Full-size Car<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span> /&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Process<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">ol</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;a&quot;</span>&gt;</span>
+    <span class="hljs-comment">&lt;!--type = i | I | a | A | 1 --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>step1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>step2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>step3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>step4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>step5<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ol</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/htqyTYpY/ul-ol-li.png"></p>
+<h3 id="dl-dt-dd">dl, dt, dd</h3>
 <hr>
 
-<p><a href="https://formspree.io/" target="_blank">https://formspree.io/</a></p>
-<blockquote>
-<p>Connect your form to our endpoint and we&#x2019;ll email you the submissions. No PHP, Javascript or sign up required &#x2014; perfect for static sites!
-<em>(FORMSPREE)</em></p>
-</blockquote>
-<h3 id="front-end-checklist">Front End Checklist</h3>
+<p>A list that consist of &apos;terms&apos; and &apos;descriptions&apos; is called a &apos;definition list&apos;. The definition list is defined by <code>&lt;dl&gt;</code>, and includes <code>&lt;dt&gt;</code>(definition term) and <code>&lt;dd&gt;</code>(definition description).</p>
+<p><code>&lt;dl&gt;</code> is a block-level element, but it can not contain any elements other than the <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code>. <code>&lt;dt&gt;</code> is an inline element and can contain inline elements and text. <code>&lt;dd&gt;</code> is a block-level element that can contain inline elements and text, and can also contain block-level elements.</p>
+<p><code>&lt;dl&gt;</code> must have at least one <code>&lt;dt&gt;</code> and <code>&lt;dd&gt;</code>.</p>
+<p>Number of <code>&lt;dt&gt;</code> &lt;= number of <code>&lt;dd&gt;</code> is OK but number of <code>&lt;dt&gt;</code> &gt; number of <code>&lt;dd&gt;</code> is not suitable.</p>
+<h3 id="example">Example</h3>
 <hr>
 
-<p><a href="https://github.com/thedaviddias/Front-End-Checklist" target="_blank">https://github.com/thedaviddias/Front-End-Checklist</a>
-<a href="https://frontendchecklist.io/" target="_blank">https://frontendchecklist.io/</a></p>
-<blockquote>
-<p>The Front-End Checklist is an exhaustive list of all elements you need to have / to test before launching your website / HTML page to production.
-<em>(Front End Checklist GitHub page)</em></p>
-<p>The Front-End Checklist Application is perfect for modern websites and meticulous developers!
-<em>(Front End Checklist)</em></p>
-</blockquote>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>HTML<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+            HTML stands for Hyper Text Markup Language, HTML is the standard
+            markup language for Web pages, <span class="hljs-tag">&lt;<span class="hljs-name">br</span> /&gt;</span>HTML elements are the building
+            blocks of HTML pages, HTML elements are represented by &amp;lt;&amp;gt; tags
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>CSS<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+            CSS stands for Cascading Style Sheets, CSS describes how HTML
+            elements are to be displayed
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/DZVcsjQZ/dl-dt-dd.png"></p>
 
                                 
                                 </section>
@@ -591,12 +625,12 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: HTML">
+                <a href="pre.html" class="navigation navigation-prev " aria-label="Previous page: pre">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="meta_tag.html" class="navigation navigation-next " aria-label="Next page: meta Tag">
+                <a href="../CSS/" class="navigation navigation-next " aria-label="Next page: CSS">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -607,7 +641,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Useful Website","level":"1.2.1","depth":2,"next":{"title":"meta Tag","level":"1.2.2","depth":2,"path":"docs/HTML/meta_tag.md","ref":"docs/HTML/meta_tag.md","articles":[]},"previous":{"title":"HTML","level":"1.2","depth":1,"path":"docs/HTML/index.md","ref":"docs/HTML/index.md","articles":[{"title":"Useful Website","level":"1.2.1","depth":2,"path":"docs/HTML/useful_website.md","ref":"docs/HTML/useful_website.md","articles":[]},{"title":"meta Tag","level":"1.2.2","depth":2,"path":"docs/HTML/meta_tag.md","ref":"docs/HTML/meta_tag.md","articles":[]},{"title":"Block, Inline Elements","level":"1.2.3","depth":2,"path":"docs/HTML/block_inline_elements.md","ref":"docs/HTML/block_inline_elements.md","articles":[]},{"title":"Character Entity References","level":"1.2.4","depth":2,"path":"docs/HTML/character_entity_references.md","ref":"docs/HTML/character_entity_references.md","articles":[]},{"title":"Syntax Highlighting","level":"1.2.5","depth":2,"path":"docs/HTML/syntax_highlighting.md","ref":"docs/HTML/syntax_highlighting.md","articles":[]},{"title":"Text Tags","level":"1.2.6","depth":2,"path":"docs/HTML/text_tag.md","ref":"docs/HTML/text_tag.md","articles":[]},{"title":"abbr, dfn, cite, small","level":"1.2.7","depth":2,"path":"docs/HTML/abbr_dfn_cite_small.md","ref":"docs/HTML/abbr_dfn_cite_small.md","articles":[]},{"title":"ruby Tag","level":"1.2.8","depth":2,"path":"docs/HTML/ruby_tag.md","ref":"docs/HTML/ruby_tag.md","articles":[]},{"title":"Time Expression","level":"1.2.9","depth":2,"path":"docs/HTML/time_expression.md","ref":"docs/HTML/time_expression.md","articles":[]},{"title":"address","level":"1.2.10","depth":2,"path":"docs/HTML/address.md","ref":"docs/HTML/address.md","articles":[]},{"title":"Quotation","level":"1.2.11","depth":2,"path":"docs/HTML/quotation.md","ref":"docs/HTML/quotation.md","articles":[]},{"title":"pre","level":"1.2.12","depth":2,"path":"docs/HTML/pre.md","ref":"docs/HTML/pre.md","articles":[]},{"title":"List","level":"1.2.13","depth":2,"path":"docs/HTML/list.md","ref":"docs/HTML/list.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/useful_website.md","mtime":"2019-04-24T12:39:29.176Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T15:18:22.871Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"List","level":"1.2.13","depth":2,"next":{"title":"CSS","level":"1.3","depth":1,"path":"docs/CSS/index.md","ref":"docs/CSS/index.md","articles":[{"title":"test","level":"1.3.1","depth":2,"path":"docs/CSS/test.md","ref":"docs/CSS/test.md","articles":[]}]},"previous":{"title":"pre","level":"1.2.12","depth":2,"path":"docs/HTML/pre.md","ref":"docs/HTML/pre.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/HTML/list.md","mtime":"2019-04-24T15:18:16.958Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-24T15:18:22.871Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

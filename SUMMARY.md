@@ -16,6 +16,7 @@
     -   [address](docs/HTML/address.md)
     -   [Quotation](docs/HTML/quotation.md)
     -   [pre](docs/HTML/pre.md)
+    -   [List](docs/HTML/list.md)
 
 -   [CSS](docs/CSS/index.md)
 
