@@ -12,6 +12,7 @@
     -   [Text Tags](docs/HTML/text_tag.md)
     -   [abbr, dfn, cite, small](docs/HTML/abbr_dfn_cite_small.md)
     -   [ruby Tag](docs/HTML/ruby_tag.md)
+    -   [Time Expression](docs/HTML/time_expression.md)
 
 -   [CSS](docs/CSS/index.md)
 
