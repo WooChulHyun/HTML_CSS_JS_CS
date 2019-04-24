@@ -1,1 +1,1 @@
-# index GH 1
+# index GH

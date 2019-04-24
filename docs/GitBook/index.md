@@ -1,1 +1,1 @@
-# index GB 1
+# index GB
