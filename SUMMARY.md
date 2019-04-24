@@ -8,6 +8,7 @@
     -   [meta Tag](docs/HTML/meta_tag.md)
 
     -   [Block, Inline Elements](docs/HTML/block_inline_elements.md)
+    -   [Character Entity References](docs/HTML/character_entity_references.md)
 
 -   [CSS](docs/CSS/index.md)
 
