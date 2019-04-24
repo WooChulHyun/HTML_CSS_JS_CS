@@ -44,4 +44,4 @@
 </body>
 ```
 
-<img src="https://i.postimg.cc/zfWk1cLX/text-tag.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/zfWk1cLX/text-tag.png">

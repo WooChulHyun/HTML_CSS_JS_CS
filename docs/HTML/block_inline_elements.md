@@ -54,4 +54,4 @@ span {
 </body>
 ```
 
-<img src="https://i.postimg.cc/BnRf8TLj/inline-block.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/BnRf8TLj/inline-block.png">

@@ -25,7 +25,7 @@
 </p>
 ```
 
-<img src="https://i.postimg.cc/QdJqxxc9/abbr.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/QdJqxxc9/abbr.png">
 
 ### dfn
 
@@ -45,7 +45,7 @@
 </p>
 ```
 
-<img src="https://i.postimg.cc/0ykwnGJj/dfn.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/0ykwnGJj/dfn.png">
 
 ### cite
 
@@ -62,7 +62,7 @@
 </ol>
 ```
 
-<img src="https://i.postimg.cc/hPFwXvQp/cite.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/hPFwXvQp/cite.png">
 
 ### small
 
@@ -79,4 +79,4 @@
 </p>
 ```
 
-<img src="https://i.postimg.cc/xTxzsJGP/small.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/xTxzsJGP/small.png">

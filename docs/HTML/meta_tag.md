@@ -90,7 +90,7 @@ Detailed settings to show the link in various socials such as Open Graph, KakaoT
 
 Example picture
 
-<img width="400px" src="https://i.postimg.cc/NFFGq7J0/meta-property-og.png" alt="HTM" title="Logo HTML">
+<img width="400px" src="https://i.postimg.cc/NFFGq7J0/meta-property-og.png">
 
 ### Other useful meta tags
 
