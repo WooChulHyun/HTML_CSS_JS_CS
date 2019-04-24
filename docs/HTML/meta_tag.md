@@ -8,12 +8,14 @@ This meta tag must be placed before `<title>`, and rest of all meta tags can be 
 <br>
 <br>
 
-```
+```html
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8" />
         <title>Page Title</title>
+    </head>
+</html>
 ```
 
 <br>
@@ -120,3 +122,38 @@ Example picture
 
 -   `<meta http-equiv="refresh" content="10; url=http://example.com/">`
     -   after the certain period of time (here 10sec), site will be redirected to example site (useful tag when you are checking, fixing your site)
+
+### Example Code
+
+<hr/>
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Page Title</title>
+        <meta name="keywords" content="" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <meta name="generator" content="" />
+        <meta name="robots" content="" />
+
+        <meta property="og:title" content="page_title" />
+        <meta property="og:url" content="http://site_url/" />
+        <meta property="og:image" content="http://Image_url" />
+        <meta property="og:image:width" content="200" />
+        <meta property="og:image:heigth" content="200" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="site_description" />
+
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+        <script defer src="main.js"></script>
+    </head>
+    <body></body>
+</html>
+```
