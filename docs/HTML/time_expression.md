@@ -28,4 +28,4 @@
 </body>
 ```
 
-<img src="https://i.postimg.cc/rmNqgwYk/time.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/rmNqgwYk/time.png">

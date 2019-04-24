@@ -27,4 +27,4 @@ It is not necessary to follow it because Syntax Highlighting can be changed by C
 </body>
 ```
 
-<img src="https://i.postimg.cc/rwXgsTS2/em-strong-makr.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/rwXgsTS2/em-strong-makr.png">

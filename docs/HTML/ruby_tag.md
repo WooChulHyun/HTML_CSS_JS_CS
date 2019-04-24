@@ -18,4 +18,4 @@ Ruby text is a short annotation for some base text. It’s typically used to giv
 </h1>
 ```
 
-<img src="https://i.postimg.cc/FsBZBs00/ruby.png" alt="HTM" title="Logo HTML">
+<img src="https://i.postimg.cc/FsBZBs00/ruby.png">
