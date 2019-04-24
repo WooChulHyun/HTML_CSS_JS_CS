@@ -4,6 +4,8 @@
 
 <hr>
 
+It is not necessary to follow it because Syntax Highlighting can be changed by CSS, but it is recommended to use it to express purpose.
+
 `<strong>` is an expression of emphasis with objective characteristics,
 
 `<em>` is an expression of emphasis with subjective characteristics,
