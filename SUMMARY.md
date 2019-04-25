@@ -18,6 +18,7 @@
     -   [pre](docs/HTML/pre.md)
     -   [List](docs/HTML/list.md)
     -   [Table](docs/HTML/table.md)
+    -   [a](docs/HTML/a.md)
 
 -   [CSS](docs/CSS/index.md)
 
