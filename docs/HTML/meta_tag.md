@@ -71,6 +71,8 @@ Detailed settings to show the link in various socials such as Open Graph, KakaoT
 
     -   우체국 EMS 요금, 국제택배 가격표 :)
 
+<br>
+
 -   `<meta property="og:url" content="http://site URL/">`
 
 -   `<meta property="og:image" content="http://be displayed image">`
@@ -85,8 +87,12 @@ Detailed settings to show the link in various socials such as Open Graph, KakaoT
 
     -   ex) website, article, etc.
 
+<br>
+
 -   `<meta property="og:description" content="site description">`
     -   한국에서 파리로 택배 붙힐일이 더 많이 생길 것……
+
+<br>
 
 Example picture
 
@@ -102,6 +108,8 @@ Example picture
 
     -   ex) bootstrap, wordpress
 
+<br>
+
 -   `<meta name="copyright" content="(c)abc.com">`
 
 -   `<meta name="reply-to" content="abc@gmail.com">`
@@ -112,16 +120,24 @@ Example picture
 
     -   to make latest version of explorer be applied
 
+<br>
+
 -   `<meta name="viewport" content="width=device-width,initial-scale=1">`
 
     -   for Responsive website
+
+<br>
 
 -   `<meta http-equiv="refresh" content="10”>`
 
     -   Site is going to be updated at every specified times (here 10sec)
 
+<br>
+
 -   `<meta http-equiv="refresh" content="10; url=http://example.com/">`
     -   after the certain period of time (here 10sec), site will be redirected to example site (useful tag when you are checking, fixing your site)
+
+<br>
 
 ### Example Code
 
