@@ -4,7 +4,7 @@
 
 <hr>
 
-Used to define as block-level quotation. The `<blockquote>` is a block-level element, but it must contain other block-level elements such as `<p>`, not directly inline elements and text. You can specify the URI where quoted with cite attribute or use the title attribute to specify the title of the quote.
+`<blockquote>` is used to define as block-level quotation. The `<blockquote>` is a block-level element, but it must contain other block-level elements such as `<p>`, not directly inline elements and text. You can specify the URI where quoted with cite attribute or use the title attribute to specify the title of the quote.
 
 ```html
 <blockquote title="HTML is... (description)">
