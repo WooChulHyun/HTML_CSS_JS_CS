@@ -17,6 +17,7 @@
     -   [Quotation](docs/HTML/quotation.md)
     -   [pre](docs/HTML/pre.md)
     -   [List](docs/HTML/list.md)
+    -   [Table](docs/HTML/table.md)
 
 -   [CSS](docs/CSS/index.md)
 
