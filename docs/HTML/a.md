@@ -6,8 +6,6 @@
 
 `<a>` is an inline element, and may enclose paragraph, table, or even whole section. But, there should be no interactive content (buttons or other links) inside the `<a>`.
 
-By specifying the tabindex attribute, it is possible to provide a user with a focus movement by key operation. The tabindex specifies the focus shift order when the tab key on the keyboard is pressed.
-
 <hr>
 
 ### Attributes
