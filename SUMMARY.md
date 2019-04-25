@@ -20,6 +20,7 @@
     -   [Table](docs/HTML/table.md)
     -   [a](docs/HTML/a.md)
     -   [Form Control](docs/HTML/form_control.md)
+    -   [HTML5 new Form Control](docs/HTML/html5_form_control.md)
 
 -   [CSS](docs/CSS/index.md)
 
