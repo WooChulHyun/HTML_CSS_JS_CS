@@ -40,7 +40,7 @@
 
 -   [VSCode](docs/VSCode/index.md)
 
-    -   [test](docs/VSCode/test.md)
+    -   [Useful extensions](docs/VSCode/useful_extensions.md)
 
 -   [GitBook](docs/GitBook/index.md)
 
