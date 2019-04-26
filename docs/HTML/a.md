@@ -61,3 +61,11 @@
 -   href = "tel: "
 
     -   `<a href="tel:123-456-7890">123-456-7890</a>`
+
+<br>
+
+-   href = "#"
+
+    -   `<a href = "#">` move to the top
+
+    -   `<a href = "#header">` move to #footer, #contents (ID only available)
