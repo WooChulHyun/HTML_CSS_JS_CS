@@ -30,10 +30,9 @@
 
     -   [test](docs/JavaScript/test.md)
 
--   [Computer Science](docs/Computer_science/index.md)
+-   [Computer Science](docs/Computer_Science/index.md)
 
-    -   [test](docs/Computer_science/test.md)
-    -   [test2](docs/Computer_science/test2.md)
+    -   [test](docs/Computer_Science/test.md)
 
 -   [Git](docs/Git/index.md)
 
