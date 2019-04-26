@@ -1,4 +1,4 @@
-# Useful extensions
+# Useful Extensions
 
 ### Auto Rename Tag
 
