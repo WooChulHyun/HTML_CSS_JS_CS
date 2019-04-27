@@ -44,4 +44,4 @@
 
 -   [GitBook](docs/GitBook/index.md)
 
-    -   [test](docs/GitBook/test.md)
+    -   [Gitbook on GitHub](docs/GitBook/gitbook_on_gitHub.md)
