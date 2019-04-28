@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>test · Web Development Book</title>
+        <title>Gitbook on GitHub · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -48,8 +48,6 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
-    
-    <link rel="next" href="../Computer_Science/" />
     
     
     <link rel="prev" href="./" />
@@ -375,9 +373,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="../JavaScript/">
             
-                <a href="./">
+                <a href="../JavaScript/">
             
                     
                     JavaScript
@@ -389,9 +387,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.4.1" data-path="test.html">
+        <li class="chapter " data-level="1.4.1" data-path="../JavaScript/test.html">
             
-                <a href="test.html">
+                <a href="../JavaScript/test.html">
             
                     
                     test
@@ -503,9 +501,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8" data-path="../GitBook/">
+        <li class="chapter " data-level="1.8" data-path="./">
             
-                <a href="../GitBook/">
+                <a href="./">
             
                     
                     GitBook
@@ -517,9 +515,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.8.1" data-path="../GitBook/gitbook_on_gitHub.html">
+        <li class="chapter active" data-level="1.8.1" data-path="gitbook_on_gitHub.html">
             
-                <a href="../GitBook/gitbook_on_gitHub.html">
+                <a href="gitbook_on_gitHub.html">
             
                     
                     Gitbook on GitHub
@@ -565,7 +563,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >test</a>
+        <a href="../.." >Gitbook on GitHub</a>
     </h1>
 </div>
 
@@ -580,8 +578,154 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="hello-js">hello JS</h1>
+                                <h1 id="gitbook-on-github">Gitbook On GitHub</h1>
+<h3 id="gitbook">GitBook</h3>
+<hr>
 
+<p>For the Gitbook, there are two ways to create a Giitbook. One is a self-hosted service provided by <a href="https://gitbook.io" target="_blank">https://gitbook.io</a>, and other is a Gitbook project that creates static sites as open source.</p>
+<p>Here we will create a Gitbook through the Github page.</p>
+<h3 id="github-page">GitHub Page</h3>
+<hr>
+
+<p>There are three main ways to host Github Pages.</p>
+<ol>
+<li><p>The master branch of the repo named username.github.io.</p>
+</li>
+<li><p>Any repo with docs folder.</p>
+</li>
+<li><p>Any repo with gh-pages branch.</p>
+</li>
+</ol>
+<p>We will create a gitbook with second way, any repo with docs folder.</p>
+<ol>
+<li>Create a repository.</li>
+</ol>
+<p><img src="https://i.postimg.cc/15XRkcsK/repoMain.png"></p>
+<ol>
+<li><p>Connect local Git and github via <code>git clone</code> or <code>git init</code>.</p>
+</li>
+<li><p>On the settings page, activate the page with master branch.</p>
+</li>
+</ol>
+<p><img src="https://i.postimg.cc/Gt5RLVdx/github-setting-page.png"></p>
+<h3 id="gitbook-installation">GitBook installation</h3>
+<hr>
+
+<p>First of all, because the Gitbook is based on node.js, node and npm should be installed in the system. npm is usually installed with node.js.</p>
+<p>Now that you have npm installed on your system, install <code>gitbook-cli</code> with the following command:</p>
+<p>I will display the branch name together. Just copy the code after $.</p>
+<pre><code>(master) $ npm install -g gitbook-cli
+</code></pre><p>When the installation is complete, run the gitbook init command from the project directory.</p>
+<pre><code>(master) $ gitbook init
+</code></pre><p>After running, there will be README.md and SUMMARY.md files in the project directory.</p>
+<pre><code>// README.md
+# Introduction
+
+
+// SUMMARY.md
+# Summary
+
+* [Introduction](README.md)
+</code></pre><p>You can build and upload directly using <code>gitbook build</code> command, but that can make it inconvenient to manage your project directory structure and files built.</p>
+<p>So let&apos;s split the branches that make up the markdown and the files that we build into.</p>
+<pre><code>(master) $ git add .
+
+(master) $ git commit -m &quot;init gitbook&quot;
+
+(master) $ git branch docs
+</code></pre><p>Now, we committed the files created by gitbook init, and created the docs branch.</p>
+<p>This docs branch will be the branch we will use to write down the markdown files, and the existing master branch will be used to build the gitbook and host the built-in html files.</p>
+<p>Before we checkout, let&apos;s build it once. (You do not have to follow)</p>
+<pre><code>(master) $ gitbook build
+</code></pre><p>After you build, you will have a _book directory.</p>
+<pre><code>_book/  &lt;----
+  gitbook/
+  index.html
+  search_index.json
+README.md
+SUMMARY.md
+</code></pre><p>Because the files in the _book directory are the files you need to host, you have to get them out.</p>
+<pre><code>(master) $ cp -R _book/* .
+</code></pre><pre><code>gitbook/
+index.html
+search_index.json
+README.md
+SUMMARY.md
+</code></pre><p>After pushing in this state, connect to the URL of the page and the following screen appears.</p>
+<p>Please note that it may take some time to push and apply to the github page.</p>
+<p><img src="https://i.postimg.cc/1z5R0LJs/gitbook-first-page.png"></p>
+<h3 id="gitbook-adding-file">GitBook adding file</h3>
+<hr>
+
+<p>Go to the docs branch.</p>
+<pre><code>(master) $ git checkout docs
+</code></pre><p>Add the md file to the docs folder (docs folder and docs branch is different)</p>
+<p><img src="https://i.postimg.cc/HnWtTWtF/gitbook-docs-folder-files.png"></p>
+<p>Now change the SUMMARY.md file as follows:</p>
+<pre><code># Summary
+
+-   [Introduction](README.md)
+
+-   [HTML](docs/HTML/index.md)
+
+    -   [Useful Website](docs/HTML/useful_website.md)
+    -   [meta Tag](docs/HTML/meta_tag.md)
+    -   [Block, Inline Elements](docs/HTML/block_inline_elements.md)
+        (omit)
+
+-   [CSS](docs/CSS/index.md)
+
+    -   [Useful Website](docs/CSS/useful_website.md)
+
+-   [JavaScript](docs/JavaScript/index.md)
+
+    (omit)
+</code></pre><p>Since gitbook reads the summary file and builds the files in the list, you must add it to summary if you want to add it.</p>
+<p>Now, after the commit, go to the master branch and build and push.</p>
+<pre><code>(docs) $ git add .
+(docs) $ git commit -m &quot;add files&quot;
+
+(docs) $ git checkout master
+
+(master) $ git merge docs
+(master) $ gitbook build
+(master) $ cp -R _book/* .
+(master) $ rm -r _book/
+
+(master) $ git add .
+(master) $ git commit -m &quot;Update&quot;
+(master) $ git push origin master
+</code></pre><p>After completing this process, the github page looks like this:</p>
+<p><img src="https://i.postimg.cc/L8rK5wwx/gitbook-example-page.png"></p>
+<h3 id="build-your-gitbook-comfortably">Build your gitbook comfortably</h3>
+<hr>
+
+<p>Back to the docs branch again.</p>
+<pre><code>(master) $ git checkout docs
+</code></pre><p>Then, add the <code>publish_gitbook.sh</code> file. The contents are as follows.</p>
+<pre><code>git checkout master
+git merge docs
+
+gitbook build
+
+cp -R _book/* .
+rm -r _book/
+
+git add .
+git commit -m &quot;Update&quot;
+git push origin master
+
+git checkout docs
+</code></pre><p>Then execute the following commands. (Just follow it once.)</p>
+<pre><code>(docs) $ git add .
+(docs) $ git commit -m &quot;add script&quot;
+(docs) $ git checkout master
+
+(master) $ git merge docs
+(master) $ git checkout docs
+</code></pre><p>From now on, when you edit something in your docs branch and build it on your gitbook, you can run it with a single command line <code>./publish_gitbook.sh</code>.</p>
+<pre><code>(docs) $ .\publish_gitbook.sh
+</code></pre>
                                 
                                 </section>
                             
@@ -608,14 +752,10 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev " aria-label="Previous page: JavaScript">
+                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: GitBook">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="../Computer_Science/" class="navigation navigation-next " aria-label="Next page: Computer Science">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -624,7 +764,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"test","level":"1.4.1","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"JavaScript","level":"1.4","depth":1,"path":"docs/JavaScript/index.md","ref":"docs/JavaScript/index.md","articles":[{"title":"test","level":"1.4.1","depth":2,"path":"docs/JavaScript/test.md","ref":"docs/JavaScript/test.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/test.md","mtime":"2019-04-26T07:51:48.605Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T13:29:57.259Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitbook on GitHub","level":"1.8.1","depth":2,"previous":{"title":"GitBook","level":"1.8","depth":1,"path":"docs/GitBook/index.md","ref":"docs/GitBook/index.md","articles":[{"title":"Gitbook on GitHub","level":"1.8.1","depth":2,"path":"docs/GitBook/gitbook_on_gitHub.md","ref":"docs/GitBook/gitbook_on_gitHub.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/GitBook/gitbook_on_gitHub.md","mtime":"2019-04-28T13:29:50.822Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T13:29:57.259Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
