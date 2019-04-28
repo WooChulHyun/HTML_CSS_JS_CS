@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>GitBook · Web Development Book</title>
+        <title>Gitbook Setting · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,8 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="gitbook_on_gitHub.html" />
     
-    
-    <link rel="prev" href="../VSCode/useful_extensions.html" />
+    <link rel="prev" href="gitbook_on_gitHub.html" />
     
 
     </head>
@@ -503,7 +501,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.8" data-path="./">
+        <li class="chapter " data-level="1.8" data-path="./">
             
                 <a href="./">
             
@@ -530,7 +528,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.8.2" data-path="gitbook_setting.html">
+        <li class="chapter active" data-level="1.8.2" data-path="gitbook_setting.html">
             
                 <a href="gitbook_setting.html">
             
@@ -578,7 +576,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >GitBook</a>
+        <a href="../.." >Gitbook Setting</a>
     </h1>
 </div>
 
@@ -593,8 +591,175 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-gb">index GB</h1>
+                                <h1 id="gitbook-setting">GitBook Setting</h1>
+<h3 id="create-a-bookjson-file">Create a book.json file</h3>
+<hr>
 
+<p>Create a book.json file in the same location as the SUMMARY.md and README.md files.</p>
+<p><img src="https://i.postimg.cc/63StVqmN/book-json.png"></p>
+<p>File contents:</p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    }
+}
+</code></pre><h3 id="create-sidebar">Create Sidebar</h3>
+<p><hr>
+Edit book.json file like follow:</p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    },
+    &quot;links&quot;: {
+        &quot;sidebar&quot;: {
+            &quot;GitHub&quot;: &quot;https://github.com/WooChulHyun&quot;
+        }
+    }
+}
+</code></pre><p><img src="https://i.postimg.cc/FsGmGTqZ/sidebar.png"></p>
+<h3 id="create-style-sheet">Create style sheet</h3>
+<hr>
+
+<p>By creating a stylesheet, you can decorate your GitBook with CSS.</p>
+<p>Create a style file in the same location as the SUMMARY.md and README.md files.</p>
+<p><img src="https://i.postimg.cc/J4FY1JB8/style-sheet.png"></p>
+<p>Edit book.json file:</p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    },
+    &quot;links&quot;: {
+        &quot;sidebar&quot;: {
+            &quot;GitHub&quot;: &quot;https://github.com/WooChulHyun&quot;
+        }
+    },
+    &quot;styles&quot;: {
+        &quot;website&quot;: &quot;styles/website.css&quot;
+    }
+}
+</code></pre><h3 id="delete-sharing-icon">Delete sharing icon</h3>
+<hr>
+
+<p><img src="https://i.postimg.cc/zvV3549q/sharing-icon.png"></p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    },
+    &quot;links&quot;: {
+        &quot;sidebar&quot;: {
+            &quot;GitHub&quot;: &quot;https://github.com/WooChulHyun&quot;
+        }
+    },
+    &quot;styles&quot;: {
+        &quot;website&quot;: &quot;styles/website.css&quot;
+    },
+
+    &quot;plugins&quot;: [&quot;-sharing&quot;],
+    &quot;pluginsConfig&quot;: {
+        &quot;sharing&quot;: {
+            &quot;facebook&quot;: false,
+            &quot;twitter&quot;: false,
+            &quot;google&quot;: false,
+            &quot;all&quot;: [&quot;facebook&quot;, &quot;google&quot;, &quot;twitter&quot;]
+        }
+}
+</code></pre><p><img src="https://i.postimg.cc/h4ZqN2cP/sharing-delete-icon.png"></p>
+<h3 id="fontsettings">Fontsettings</h3>
+<hr>
+
+<p>You can control the theme, font-family, and size of your GitBook.</p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    },
+    &quot;links&quot;: {
+        &quot;sidebar&quot;: {
+            &quot;GitHub&quot;: &quot;https://github.com/WooChulHyun&quot;
+        }
+    },
+    &quot;styles&quot;: {
+        &quot;website&quot;: &quot;styles/website.css&quot;
+    },
+
+    &quot;plugins&quot;: [&quot;-sharing&quot;, &quot;-fontsettings&quot;],
+    &quot;pluginsConfig&quot;: {
+        &quot;sharing&quot;: {
+            &quot;facebook&quot;: false,
+            &quot;twitter&quot;: false,
+            &quot;google&quot;: false,
+            &quot;all&quot;: [&quot;facebook&quot;, &quot;google&quot;, &quot;twitter&quot;]
+        },
+        &quot;fontsettings&quot;: {
+            &quot;theme&quot;: &quot;white&quot;,
+            &quot;family&quot;: &quot;sans&quot;,
+            &quot;size&quot;: 2
+        }
+    }
+}
+</code></pre><h3 id="toggle-chapters">Toggle Chapters</h3>
+<hr>
+
+<p>You can put a toggle effect in the sidebar chapter.
+<code>&quot;plugins&quot;: [&quot;toggle-chapters&quot;]</code></p>
+<pre><code>{
+    &quot;title&quot;: &quot;Web Development Book&quot;,
+    &quot;description&quot;: &quot;HTML CSS JS CS &#xC815;&#xB9AC;&quot;,
+    &quot;author&quot;: &quot;Woochul Hyun&quot;,
+    &quot;language&quot;: &quot;en, ko&quot;,
+    &quot;root&quot;: &quot;.&quot;,
+    &quot;structure&quot;: {
+        &quot;summary&quot;: &quot;SUMMARY.md&quot;
+    },
+    &quot;links&quot;: {
+        &quot;sidebar&quot;: {
+            &quot;GitHub&quot;: &quot;https://github.com/WooChulHyun&quot;
+        }
+    },
+    &quot;styles&quot;: {
+        &quot;website&quot;: &quot;styles/website.css&quot;
+    },
+
+    &quot;plugins&quot;: [&quot;-sharing&quot;, &quot;-fontsettings&quot;, &quot;toggle-chapters&quot;],
+    &quot;pluginsConfig&quot;: {
+        &quot;sharing&quot;: {
+            &quot;facebook&quot;: false,
+            &quot;twitter&quot;: false,
+            &quot;google&quot;: false,
+            &quot;all&quot;: [&quot;facebook&quot;, &quot;google&quot;, &quot;twitter&quot;]
+        },
+        &quot;fontsettings&quot;: {
+            &quot;theme&quot;: &quot;white&quot;,
+            &quot;family&quot;: &quot;sans&quot;,
+            &quot;size&quot;: 2
+        }
+    }
+}
+</code></pre>
                                 
                                 </section>
                             
@@ -621,14 +786,10 @@
 
             
                 
-                <a href="../VSCode/useful_extensions.html" class="navigation navigation-prev " aria-label="Previous page: Useful Extensions">
+                <a href="gitbook_on_gitHub.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Gitbook on GitHub">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="gitbook_on_gitHub.html" class="navigation navigation-next " aria-label="Next page: Gitbook on GitHub">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -637,7 +798,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"GitBook","level":"1.8","depth":1,"next":{"title":"Gitbook on GitHub","level":"1.8.1","depth":2,"path":"docs/GitBook/gitbook_on_gitHub.md","ref":"docs/GitBook/gitbook_on_gitHub.md","articles":[]},"previous":{"title":"Useful Extensions","level":"1.7.1","depth":2,"path":"docs/VSCode/useful_extensions.md","ref":"docs/VSCode/useful_extensions.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/GitBook/index.md","mtime":"2019-04-28T13:30:10.228Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T13:57:26.533Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Gitbook Setting","level":"1.8.2","depth":2,"previous":{"title":"Gitbook on GitHub","level":"1.8.1","depth":2,"path":"docs/GitBook/gitbook_on_gitHub.md","ref":"docs/GitBook/gitbook_on_gitHub.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/GitBook/gitbook_setting.md","mtime":"2019-04-28T13:57:21.815Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-28T13:57:26.533Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
