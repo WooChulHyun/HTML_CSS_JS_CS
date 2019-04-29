@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>CSS · Web Development Book</title>
+        <title>Size and Color · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="useful_website.html" />
+    <link rel="next" href="font_text_style.html" />
     
     
-    <link rel="prev" href="../HTML/html5_form_control.html" />
+    <link rel="prev" href="css_selector.html" />
     
 
     </head>
@@ -343,7 +343,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3" data-path="./">
+        <li class="chapter " data-level="1.3" data-path="./">
             
                 <a href="./">
             
@@ -383,7 +383,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.3" data-path="size_color.html">
+        <li class="chapter active" data-level="1.3.3" data-path="size_color.html">
             
                 <a href="size_color.html">
             
@@ -617,7 +617,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >CSS</a>
+        <a href="../.." >Size and Color</a>
     </h1>
 </div>
 
@@ -632,7 +632,193 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-css">index CSS</h1>
+                                <h1 id="size-and-color">Size and Color</h1>
+<h3 id="size">Size</h3>
+<hr>
+
+<p>There are size units such as cm, mm, and inch, but typical size units used in CSS are px, em, rem, %.</p>
+<p>px is the absolute value, em, rem and \% is the relative value.</p>
+<p>The default font size for most browsers is 16px, 1em, 1rem, 100%.</p>
+<h3 id="px">px</h3>
+<hr>
+
+<p>px is the pixel unit. 1px means the size of one pixel.</p>
+<p>Pixels have relative sizes depending on the device resolution.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.fontSize15</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">15px</span>;
+    }
+    <span class="hljs-selector-class">.fontSize30</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">30px</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize15&quot;</span>&gt;</span>font-size: 15px<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize30&quot;</span>&gt;</span>font-size: 30px<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/0yjjQNJx/size-px.png"></p>
+<h3 id="em">em</h3>
+<hr>
+
+<p>em is the relative unit. Sets the size relative to the inherited or default size.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-class">.fontSize1em</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1em</span>;
+    }
+    <span class="hljs-selector-class">.fontSize2em</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize1em&quot;</span>&gt;</span>font-size: 1em<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize2em&quot;</span>&gt;</span>font-size: 2em<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/tCySHT44/size-em1.png"></p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2em</span>;
+    }
+    <span class="hljs-selector-class">.div1</span> {
+        <span class="hljs-attribute">background</span>: skyblue;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">30px</span>;
+    }
+    <span class="hljs-selector-class">.div2</span> {
+        <span class="hljs-attribute">background</span>: pink;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize2em div1&quot;</span>&gt;</span>
+        font-size: 2em
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize2em div2&quot;</span>&gt;</span>font-size: 2em<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/zXXQgvZP/size-em2.png"></p>
+<h3 id="rem">rem</h3>
+<hr>
+
+<p>rem is based on the size of the top-level element(html). The r in rem means root.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+    }
+    <span class="hljs-selector-class">.div1</span> {
+        <span class="hljs-attribute">background</span>: skyblue;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">30px</span>;
+    }
+    <span class="hljs-selector-class">.div2</span> {
+        <span class="hljs-attribute">background</span>: pink;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">500px</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize2rem div1&quot;</span>&gt;</span>
+        font-size: 2em
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fontSize2rem div2&quot;</span>&gt;</span>font-size: 2rem<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/WbvkWqbX/size-rem.png"></p>
+<h3 id="">\%</h3>
+<hr>
+
+<p>\% is the relative unit. Sets the size relative to the inherited or default size.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+    }
+    <span class="hljs-selector-tag">p</span> {
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">50%</span>;
+        <span class="hljs-attribute">background-color</span>: yellow;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi,
+            quas quam! In perferendis reiciendis blanditiis aliquid debitis
+            ducimus quod sapiente eligendi pariatur! Sunt commodi ratione
+            aspernatur tenetur! Impedit, omnis ratione?
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi, quas
+        quam! In perferendis reiciendis blanditiis aliquid debitis ducimus
+        quod sapiente eligendi pariatur! Sunt commodi ratione aspernatur
+        tenetur! Impedit, omnis ratione?
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/Rh3Xg6SM/size.png"></p>
+<h3 id="viewportvh-vw-vmin-vmax">Viewport(vh, vw, vmin, vmax)</h3>
+<hr>
+
+<ul>
+<li>vh, vw</li>
+</ul>
+<p>The vh is in hundredths of a height value. For example, if the browser height size is 900px, 1vh means 9px. Similarly, if the width of the viewport is 750px, 1vw is 7.5px.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-selector-tag">p</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+        <span class="hljs-attribute">background</span>: skyblue;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-selector-class">.div1</span> {
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">33vh</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">50vw</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;outer&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span>vh, vw<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/9Qr1VgsL/size-vh-vw.png"></p>
+<ul>
+<li>vmin, vmax</li>
+</ul>
+<p>If vh and vw are always affected by the width and height values of the viewport, vmin and vmax can specify the maximum and minimum values according to the width and height values. For example, if your browser is 1100px wide and 700px high, 1vmin will be 7px and 1vmax will be 11px. When the width value becomes 800px and the height value becomes 1080px, vmin becomes 8px and vmax becomes 10.8px.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-tag">div</span> {
+        <span class="hljs-attribute">border</span>: <span class="hljs-number">1px</span> solid <span class="hljs-number">#000</span>;
+        <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-selector-tag">p</span> {
+        <span class="hljs-attribute">font-size</span>: <span class="hljs-number">2rem</span>;
+        <span class="hljs-attribute">background</span>: skyblue;
+        <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-selector-class">.div1</span> {
+        <span class="hljs-attribute">height</span>: <span class="hljs-number">50vmax</span>;
+        <span class="hljs-attribute">width</span>: <span class="hljs-number">30vmin</span>;
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;outer&quot;</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;div1&quot;</span>&gt;</span>vmin, vmax<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/ZRb062Pm/size-vmin-vmax.png"></p>
 
                                 
                                 </section>
@@ -660,12 +846,12 @@
 
             
                 
-                <a href="../HTML/html5_form_control.html" class="navigation navigation-prev " aria-label="Previous page: HTML5 new Form Control">
+                <a href="css_selector.html" class="navigation navigation-prev " aria-label="Previous page: CSS Selector">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="useful_website.html" class="navigation navigation-next " aria-label="Next page: Useful Website">
+                <a href="font_text_style.html" class="navigation navigation-next " aria-label="Next page: FONT / TEXT Style">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -676,7 +862,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CSS","level":"1.3","depth":1,"next":{"title":"Useful Website","level":"1.3.1","depth":2,"path":"docs/CSS/useful_website.md","ref":"docs/CSS/useful_website.md","articles":[]},"previous":{"title":"HTML5 new Form Control","level":"1.2.17","depth":2,"path":"docs/HTML/html5_form_control.md","ref":"docs/HTML/html5_form_control.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/index.md","mtime":"2019-04-29T05:21:25.754Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-29T12:39:56.725Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Size and Color","level":"1.3.3","depth":2,"next":{"title":"FONT / TEXT Style","level":"1.3.4","depth":2,"path":"docs/CSS/font_text_style.md","ref":"docs/CSS/font_text_style.md","articles":[]},"previous":{"title":"CSS Selector","level":"1.3.2","depth":2,"path":"docs/CSS/css_selector.md","ref":"docs/CSS/css_selector.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/size_color.md","mtime":"2019-04-29T12:39:51.309Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-29T12:39:56.725Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
