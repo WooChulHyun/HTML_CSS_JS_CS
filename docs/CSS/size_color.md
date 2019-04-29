@@ -120,11 +120,11 @@ rem is based on the size of the top-level element(html). The r in rem means root
 
 <img src="https://i.postimg.cc/WbvkWqbX/size-rem.png">
 
-### \%
+### %
 
 <hr>
 
-\% is the relative unit. Sets the size relative to the inherited or default size.
+% is the relative unit. Sets the size relative to the inherited or default size.
 
 ```html
 <style>
@@ -193,7 +193,9 @@ The vh is in hundredths of a height value. For example, if the browser height si
 
 -   vmin, vmax
 
-If vh and vw are always affected by the width and height values of the viewport, vmin and vmax can specify the maximum and minimum values according to the width and height values. For example, if your browser is 1100px wide and 700px high, 1vmin will be 7px and 1vmax will be 11px. When the width value becomes 800px and the height value becomes 1080px, vmin becomes 8px and vmax becomes 10.8px.
+If vh and vw are always affected by the width and height values of the viewport, vmin and vmax can specify the maximum and minimum values according to the width and height values.
+
+For example, if your browser is 1100px wide and 700px high, 1vmin will be 7px and 1vmax will be 11px. When the width value becomes 800px and the height value becomes 1080px, vmin becomes 8px and vmax becomes 10.8px.
 
 ```html
 <style>
@@ -220,3 +222,5 @@ If vh and vw are always affected by the width and height values of the viewport,
 ```
 
 <img src="https://i.postimg.cc/ZRb062Pm/size-vmin-vmax.png">
+
+### Color
