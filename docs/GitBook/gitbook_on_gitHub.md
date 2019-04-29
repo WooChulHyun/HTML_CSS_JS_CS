@@ -223,3 +223,9 @@ From now on, when you edit something in your docs branch and build it on your gi
 ```
 (docs) $ .\publish_gitbook.sh
 ```
+
+If you want to preview your changes to the local server before publishing to the server,
+
+```
+(docs) $ gitbook serve
+```
