@@ -27,7 +27,7 @@
     -   [Useful Website](docs/CSS/useful_website.md)
     -   [CSS Selector](docs/CSS/css_selector.md)
     -   [Size and Color](docs/CSS/size_color.md)
-    -   [FONT / TEXT Style](docs/CSS/font_text_style.md)
+    -   [Font / Text Style](docs/CSS/font_text_style.md)
 
 -   [JavaScript](docs/JavaScript/index.md)
 
