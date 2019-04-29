@@ -1,12 +1,12 @@
-# Gitbook On GitHub
+# GitBook On GitHub
 
 ### GitBook
 
 <hr>
 
-For the Gitbook, there are two ways to create a Giitbook. One is a self-hosted service provided by https://gitbook.io, and other is a Gitbook project that creates static sites as open source.
+For the GitBook, there are two ways to create a GiitBook. One is a self-hosted service provided by https://gitbook.io, and other is a GitBook project that creates static sites as open source.
 
-Here we will create a Gitbook through the Github page.
+Here we will create a GitBook through the Github page.
 
 ### GitHub Page
 
@@ -20,7 +20,7 @@ There are three main ways to host Github Pages.
 
 3. Any repo with gh-pages branch.
 
-We will create a gitbook with second way, any repo with docs folder.
+We will create a gitBook with second way, any repo with docs folder.
 
 1. Create a repository.
 
@@ -36,7 +36,7 @@ We will create a gitbook with second way, any repo with docs folder.
 
 <hr>
 
-First of all, because the Gitbook is based on node.js, node and npm should be installed in the system. npm is usually installed with node.js.
+First of all, because the GitBook is based on node.js, node and npm should be installed in the system. npm is usually installed with node.js.
 
 Now that you have npm installed on your system, install `gitbook-cli` with the following command:
 
@@ -46,7 +46,7 @@ I will display the branch name together. Just copy the code after \$.
 (master) $ npm install -g gitbook-cli
 ```
 
-When the installation is complete, run the gitbook init command from the project directory.
+When the installation is complete, run the gitBook init command from the project directory.
 
 ```
 (master) $ gitbook init
