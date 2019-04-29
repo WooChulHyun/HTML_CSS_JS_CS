@@ -44,5 +44,5 @@
 
 -   [GitBook](docs/GitBook/index.md)
 
-    -   [Gitbook on GitHub](docs/GitBook/gitbook_on_gitHub.md)
-    -   [Gitbook Setting](docs/GitBook/gitbook_setting.md)
+    -   [GitBook on GitHub](docs/GitBook/gitbook_on_gitHub.md)
+    -   [GitBook Setting](docs/GitBook/gitbook_setting.md)
