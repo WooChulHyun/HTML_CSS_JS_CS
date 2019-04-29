@@ -478,7 +478,7 @@ Selects all elements with target="\_blank"
 
 <hr>
 
-Selects all elements with a title attribute containing the word "highlight"
+Selects all elements with a class attribute containing the word "highlight"
 
 ```
 <style>
@@ -542,7 +542,7 @@ Selects all elements with a lang attribute value starting with "en"
 
 <hr>
 
-Selects every <div> element whose href attribute value begins with "highlight"
+Selects every <div> element whose class attribute value begins with "highlight"
 
 Must start at the same value. (`div[class^="high"]`) also possible.
 
@@ -575,7 +575,7 @@ Must start at the same value. (`div[class^="high"]`) also possible.
 
 ### 15. [attribute$=value]
 
-Selects every <div> element whose href attribute value ends with "highlight"
+Selects every <div> element whose class attribute value ends with "highlight"
 
 Ending value must be the same. (`div[class^="light"]`) also possible.
 
@@ -605,3 +605,36 @@ Ending value must be the same. (`div[class^="light"]`) also possible.
 ```
 
 <img src="https://i.postimg.cc/jSc4GTDB/CSS-Selectors-attribute-value.png">
+
+### 16. [attribute*=value]
+
+<hr>
+
+Selects every <div> element whose class attribute value contains the substring "highlight"
+
+Anything that belongs to the value of a high or light that
+
+```
+<style>
+    div[class*="highlight"] {
+        background-color: yellow;
+    }
+</style>
+</head>
+
+<body>
+    <h1>CSS Selectors</h1>
+
+    <div class="nothing highlight nothing1">
+        highlight highlight highlight
+    </div>
+
+    <div class="highlight_nothing">nothing nothing nothing</div>
+
+    <div class="highlight">highlight highlight highlight</div>
+
+    <div class="nothing_highlight">highlight highlight highlight</div>
+
+    <p class="highlight">nothing nothing nothing</p>
+</body>
+```
