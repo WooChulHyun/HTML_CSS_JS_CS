@@ -991,7 +991,7 @@ body
 12-attributevalue
 
 
-selects-all-elements-with-a-title-attribute-containing-the-word-highlight
+selects-all-elements-with-a-class-attribute-containing-the-word-highlight
 style
 ----divclasshighlight-
 --------background-color-yellow
@@ -1043,7 +1043,7 @@ body
 14-attributevalue
 
 
-selects-every--element-whose-href-attribute-value-begins-with-highlight
+selects-every--element-whose-class-attribute-value-begins-with-highlight
 must-start-at-the-same-value-divclasshigh-also-possible
 style
 ----divclasshighlight-
@@ -1069,7 +1069,7 @@ body
 body
 
 15-attributevalue
-selects-every--element-whose-href-attribute-value-ends-with-highlight
+selects-every--element-whose-class-attribute-value-ends-with-highlight
 ending-value-must-be-the-same-divclasslight-also-possible
 style
 ----divclasshighlight-
@@ -1094,6 +1094,33 @@ body
 ----p-classhighlightnothing-nothing-nothingp
 body
 
+16-attributevalue
+
+
+selects-every--element-whose-class-attribute-value-contains-the-substring-highlight
+anything-that-belongs-to-the-value-of-a-high-or-light-that
+style
+----divclasshighlight-
+--------background-color-yellow
+----
+style
+head
+
+body
+----h1css-selectorsh1
+
+----div-classnothing-highlight-nothing1
+--------highlight-highlight-highlight
+----div
+
+----div-classhighlightnothingnothing-nothing-nothingdiv
+
+----div-classhighlighthighlight-highlight-highlightdiv
+
+----div-classnothinghighlighthighlight-highlight-highlightdiv
+
+----p-classhighlightnothing-nothing-nothingp
+body
 "> elements and all <p> elements</p>
 <pre><code>&lt;style&gt;
     h1,
@@ -1323,7 +1350,7 @@ body
 <h3 id="12-attributevalue">12. [attribute~=value]</h3>
 <hr>
 
-<p>Selects all elements with a title attribute containing the word &quot;highlight&quot;</p>
+<p>Selects all elements with a class attribute containing the word &quot;highlight&quot;</p>
 <pre><code>&lt;style&gt;
     div[class~=&quot;highlight&quot;] {
         background-color: yellow;
@@ -1375,7 +1402,7 @@ body
 <h3 id="14-attributevalue">14. [attribute^=value]</h3>
 <hr>
 
-<p>Selects every <div> element whose href attribute value begins with &quot;highlight&quot;</div></p>
+<p>Selects every <div> element whose class attribute value begins with &quot;highlight&quot;</div></p>
 <p>Must start at the same value. (<code>div[class^=&quot;high&quot;]</code>) also possible.</p>
 <pre><code>&lt;style&gt;
     div[class^=&quot;highlight&quot;] {
@@ -1401,7 +1428,7 @@ body
 &lt;/body&gt;
 </code></pre><p><img src="https://i.postimg.cc/7hRNtnbh/CSS-Selectors-attribute-value.png"></p>
 <h3 id="15-attributevalue">15. [attribute$=value]</h3>
-<p>Selects every <div> element whose href attribute value ends with &quot;highlight&quot;</div></p>
+<p>Selects every <div> element whose class attribute value ends with &quot;highlight&quot;</div></p>
 <p>Ending value must be the same. (<code>div[class^=&quot;light&quot;]</code>) also possible.</p>
 <pre><code>&lt;style&gt;
     div[class$=&quot;highlight&quot;] {
@@ -1426,7 +1453,34 @@ body
     &lt;p class=&quot;highlight&quot;&gt;nothing nothing nothing&lt;/p&gt;
 &lt;/body&gt;
 </code></pre><p><img src="https://i.postimg.cc/jSc4GTDB/CSS-Selectors-attribute-value.png"></p>
-</h1>
+<h3 id="16-attributevalue">16. [attribute*=value]</h3>
+<hr>
+
+<p>Selects every <div> element whose class attribute value contains the substring &quot;highlight&quot;</div></p>
+<p>Anything that belongs to the value of a high or light that</p>
+<pre><code>&lt;style&gt;
+    div[class*=&quot;highlight&quot;] {
+        background-color: yellow;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;CSS Selectors&lt;/h1&gt;
+
+    &lt;div class=&quot;nothing highlight nothing1&quot;&gt;
+        highlight highlight highlight
+    &lt;/div&gt;
+
+    &lt;div class=&quot;highlight_nothing&quot;&gt;nothing nothing nothing&lt;/div&gt;
+
+    &lt;div class=&quot;highlight&quot;&gt;highlight highlight highlight&lt;/div&gt;
+
+    &lt;div class=&quot;nothing_highlight&quot;&gt;highlight highlight highlight&lt;/div&gt;
+
+    &lt;p class=&quot;highlight&quot;&gt;nothing nothing nothing&lt;/p&gt;
+&lt;/body&gt;
+</code></pre></h1>
                                 
                                 </section>
                             
@@ -1469,7 +1523,7 @@ body
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"CSS Selector","level":"1.3.2","depth":2,"next":{"title":"JavaScript","level":"1.4","depth":1,"path":"docs/JavaScript/index.md","ref":"docs/JavaScript/index.md","articles":[{"title":"test","level":"1.4.1","depth":2,"path":"docs/JavaScript/test.md","ref":"docs/JavaScript/test.md","articles":[]}]},"previous":{"title":"Useful Website","level":"1.3.1","depth":2,"path":"docs/CSS/useful_website.md","ref":"docs/CSS/useful_website.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/css_selector.md","mtime":"2019-04-29T04:03:38.936Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-29T04:03:43.623Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"CSS Selector","level":"1.3.2","depth":2,"next":{"title":"JavaScript","level":"1.4","depth":1,"path":"docs/JavaScript/index.md","ref":"docs/JavaScript/index.md","articles":[{"title":"test","level":"1.4.1","depth":2,"path":"docs/JavaScript/test.md","ref":"docs/JavaScript/test.md","articles":[]}]},"previous":{"title":"Useful Website","level":"1.3.1","depth":2,"path":"docs/CSS/useful_website.md","ref":"docs/CSS/useful_website.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/css_selector.md","mtime":"2019-04-29T04:13:59.464Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-29T04:14:03.299Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
