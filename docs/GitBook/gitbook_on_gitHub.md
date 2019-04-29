@@ -4,7 +4,7 @@
 
 <hr>
 
-For the GitBook, there are two ways to create a GiitBook. One is a self-hosted service provided by https://gitbook.io, and other is a GitBook project that creates static sites as open source.
+For the GitBook, there are two ways to create a GitBook. One is a self-hosted service provided by https://gitbook.io, and other is a GitBook project that creates static sites as open source.
 
 Here we will create a GitBook through the Github page.
 
