@@ -168,6 +168,7 @@
     "guides.indent.hideBackgroundOnSelection": true,
     "workbench.colorTheme": "Dracula",
     "editor.renderIndentGuides": false,
-    "workbench.iconTheme": "vscode-icons"
+    "workbench.iconTheme": "vscode-icons",
+    "eslint.validate": ["javascript", "html"]
 }
 ```
