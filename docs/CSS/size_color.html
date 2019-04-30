@@ -821,6 +821,134 @@
 </code></pre>
 <p><img src="https://i.postimg.cc/ZRb062Pm/size-vmin-vmax.png"></p>
 <h3 id="color">Color</h3>
+<hr>
+
+<p>You can use keywords (yellow, red, blue ...) to specify colors. It has the advantage of being easy to use, but the number of colors that can be expressed is limited.</p>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color:red&quot;</span>&gt;</span>
+        Red background-color
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color:green&quot;</span>&gt;</span>
+        Green background-color
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;background-color:yellow&quot;</span>&gt;</span>
+        Yellow background-color
+    <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/pdZ6hpYs/bg-color.png"></p>
+<p>In order to express more various colors, the following color expression units can be used.</p>
+<table>
+<thead>
+<tr>
+<th>Color Units</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>HEX (Hexadecimal Colors)</td>
+<td>#000000</td>
+</tr>
+<tr>
+<td>RGB (Red, Green, Blue)</td>
+<td>rgb(255, 255, 0) / (0 ~ 255)</td>
+</tr>
+<tr>
+<td>RGBA (Red, Green, Blue, Alpha)</td>
+<td>rgba(255, 255, 0, 1) / Alpha (0 ~ 1)</td>
+</tr>
+<tr>
+<td>HSL (Hue, Saturation, Lightness)</td>
+<td>hsl(0, 50%, 25%) / h(0 ~ 360) s,l (0 ~ 100)</td>
+</tr>
+<tr>
+<td>HSLA (Hue, Saturation, Lightness, Alpha)</td>
+<td>hsla(60, 100%, 25%, 1) / Alpha (0 ~ 1)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="lang-html"><span class="hljs-tag">&lt;<span class="hljs-name">style</span>&gt;</span><span class="css">
+    <span class="hljs-selector-id">#hex-red</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ff0000</span>;
+    }
+    <span class="hljs-selector-id">#hex-green</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#00ff00</span>;
+    }
+    <span class="hljs-selector-id">#hex-yellow</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-number">#ffff00</span>;
+    }
+
+    <span class="hljs-selector-id">#rgb-red</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(255, 0, 0);
+    }
+    <span class="hljs-selector-id">#rgb-green</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(0, 255, 0);
+    }
+    <span class="hljs-selector-id">#rgb-yellow</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgb</span>(255, 255, 0);
+    }
+
+    <span class="hljs-selector-id">#rgba-red</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(255, 0, 0, 0.3);
+    }
+    <span class="hljs-selector-id">#rgba-green</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(0, 255, 0, 0.3);
+    }
+    <span class="hljs-selector-id">#rgba-yellow</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">rgba</span>(255, 255, 0, 0.3);
+    }
+
+    <span class="hljs-selector-id">#hsl-red</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(0, 100%, 50%);
+    }
+    <span class="hljs-selector-id">#hsl-green</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(120, 100%, 50%);
+    }
+    <span class="hljs-selector-id">#hsl-yellow</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsl</span>(60, 100%, 50%);
+    }
+
+    <span class="hljs-selector-id">#hsla-red</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsla</span>(0, 100%, 50%, 0.3);
+    }
+    <span class="hljs-selector-id">#hsla-green</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsla</span>(120, 100%, 50%, 0.3);
+    }
+    <span class="hljs-selector-id">#hsla-yellow</span> {
+        <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">hsla</span>(60, 100%, 50%, 0.3);
+    }
+</span><span class="hljs-tag">&lt;/<span class="hljs-name">style</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>HEX colors:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hex-red&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hex-green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hex-yellow&quot;</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>RGB colors:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgb-red&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgb-green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgb-yellow&quot;</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>RGB colors with opacity:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgba-red&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgba-green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;rgba-yellow&quot;</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>HSL colors:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsl-red&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsl-green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsl-yellow&quot;</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>HSL colors with opacity:<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsla-red&quot;</span>&gt;</span>Red<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsla-green&quot;</span>&gt;</span>Green<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;hsla-yellow&quot;</span>&gt;</span>Yellow<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/jdD2MfDJ/bg-color-expression.png"></p>
 
                                 
                                 </section>
@@ -864,7 +992,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Size and Color","level":"1.3.3","depth":2,"next":{"title":"Font / Text Style","level":"1.3.4","depth":2,"path":"docs/CSS/font_text_style.md","ref":"docs/CSS/font_text_style.md","articles":[]},"previous":{"title":"CSS Selector","level":"1.3.2","depth":2,"path":"docs/CSS/css_selector.md","ref":"docs/CSS/css_selector.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/size_color.md","mtime":"2019-04-29T12:44:02.633Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-29T12:44:06.356Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Size and Color","level":"1.3.3","depth":2,"next":{"title":"Font / Text Style","level":"1.3.4","depth":2,"path":"docs/CSS/font_text_style.md","ref":"docs/CSS/font_text_style.md","articles":[]},"previous":{"title":"CSS Selector","level":"1.3.2","depth":2,"path":"docs/CSS/css_selector.md","ref":"docs/CSS/css_selector.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/CSS/size_color.md","mtime":"2019-04-30T01:33:35.591Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-30T01:33:41.053Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
