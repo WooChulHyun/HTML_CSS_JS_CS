@@ -22,7 +22,7 @@ When the Selector Priority is the same, the style you applied later appears, but
 
 <hr>
 
-```
+```html
 <style>
             #contentsId {
                 background: skyblue;
@@ -51,7 +51,7 @@ ID Selector \> class selector \> Type Selector
 
 <img src="https://i.postimg.cc/HLj60GfC/CSS-Selectors.png">
 
-```
+```html
 <style>
             #contentsId {
                 background: skyblue;
@@ -86,7 +86,7 @@ ID Selector \> class selector \> Type Selector
 
 Selects all elements with class="yellow"
 
-```
+```html
 <style>
     .yellow {
         background-color: yellow;
@@ -113,7 +113,7 @@ Selects all elements with class="yellow"
 
 Selects the element with id="yellow"
 
-```
+```html
 <style>
     #yellow {
         background-color: yellow;
@@ -141,7 +141,8 @@ Selects the element with id="yellow"
 
 Selects all elements
 
-```
+```html
+<style>
 * {
     background-color: yellow;
     }
@@ -166,7 +167,7 @@ Selects all elements
 
 Selects all `<html, body, div, p, a...>` elements
 
-```
+```html
 <style>
     p {
         background-color: yellow;
@@ -194,7 +195,7 @@ Selects all `<html, body, div, p, a...>` elements
 
 Selects all `<h1>` elements and all `<p>` elements
 
-```
+```html
 <style>
     h1,
     p {
@@ -223,7 +224,7 @@ Selects all `<h1>` elements and all `<p>` elements
 
 Selects all `<p>` elements inside `<div>` elements
 
-```
+```html
 <style>
     div p {
         background-color: yellow;
@@ -246,7 +247,7 @@ Selects all `<p>` elements inside `<div>` elements
 
 <img src="https://i.postimg.cc/MKfck9Vm/CSS-Selectors-element-element-1.png">
 
-```
+```html
 <style>
     div p {
         background-color: yellow;
@@ -283,7 +284,7 @@ Compare with element > element
 
 Selects all `<p>` elements where the parent is a `<div>` element
 
-```
+```html
 <style>
     div > p {
         background-color: yellow;
@@ -305,7 +306,7 @@ Selects all `<p>` elements where the parent is a `<div>` element
 
 <img src="https://i.postimg.cc/3xVkcbK2/CSS-Selectors-element-element-1.png">
 
-```
+```html
 <style>
     div > p {
         background-color: yellow;
@@ -343,7 +344,7 @@ Compare with element element
 
 Selects all `<p>` elements that are placed immediately after `<div>` elements
 
-```
+```html
 <style>
     div + p {
         background-color: yellow;
@@ -365,7 +366,7 @@ Selects all `<p>` elements that are placed immediately after `<div>` elements
 
 <img src="https://i.postimg.cc/PJJhhTyJ/CSS-Selectors-element-element-1.png">
 
-```
+```html
 <style>
     span + p {
         background-color: yellow;
@@ -392,7 +393,7 @@ Selects all `<p>` elements that are placed immediately after `<div>` elements
 
 Selects every `<p>` element that are preceded by a `<span>` element
 
-```
+```html
 <style>
     span ~ p {
         background-color: yellow;
@@ -427,7 +428,7 @@ Selects every `<p>` element that are preceded by a `<span>` element
 
 Selects all elements with a target attribute
 
-```
+```html
 <style>
     a[target] {
         background-color: yellow;
@@ -453,7 +454,7 @@ Selects all elements with a target attribute
 
 Selects all elements with target="\_blank"
 
-```
+```html
 <style>
     a[target="_blank"] {
         background-color: yellow;
@@ -480,7 +481,7 @@ Selects all elements with target="\_blank"
 
 Selects all elements with a class attribute containing the word "highlight"
 
-```
+```html
 <style>
     div[class~="highlight"] {
         background-color: yellow;
@@ -511,7 +512,7 @@ Selects all elements with a class attribute containing the word "highlight"
 
 Selects all elements with a lang attribute value starting with "en"
 
-```
+```html
 <style>
     [lang|="en"] {
         background-color: yellow;
@@ -546,7 +547,7 @@ Selects every `<div>` element whose class attribute value begins with "highlight
 
 Must start at the same value. (`div[class^="high"]`) also possible.
 
-```
+```html
 <style>
     div[class^="highlight"] {
         background-color: yellow;
@@ -579,7 +580,7 @@ Selects every `<div>` element whose class attribute value ends with "highlight"
 
 Ending value must be the same. (`div[class^="light"]`) also possible.
 
-```
+```html
 <style>
     div[class$="highlight"] {
         background-color: yellow;
@@ -614,7 +615,7 @@ Selects every `<div>` element whose class attribute value contains the substring
 
 `div[class*="high"]` and`div[class*="light"]` also possible.
 
-```
+```html
 <style>
     div[class*="highlight"] {
         background-color: yellow;
@@ -654,7 +655,7 @@ in general, we use these all selectors in once.
 
 -   :link
 
-```
+```html
 <style>
     a:link {
         color: black;
@@ -676,7 +677,7 @@ in general, we use these all selectors in once.
 
 When after you clicked the link.
 
-```
+```html
 <style>
     a:visited {
         color: gray;
@@ -698,7 +699,7 @@ When after you clicked the link.
 
 When you hovered over the link.
 
-```
+```html
 <style>
     a:hover {
         color: blue;
@@ -719,7 +720,7 @@ When you hovered over the link.
 
 When you are holding a click with your mouse
 
-```
+```html
 <style>
     a:active {
         color: red;
@@ -741,7 +742,7 @@ When you are holding a click with your mouse
 
 It is applied at the moment of mouse click, but main usage is to be shown when approaching by tab key.
 
-```
+```html
 <style>
     a:focus {
         color: green;
@@ -761,7 +762,7 @@ It is applied at the moment of mouse click, but main usage is to be shown when a
 
 -   Use all selectors in once
 
-```
+```html
 <style>
     a {
         color: black;
@@ -798,7 +799,7 @@ It is applied at the moment of mouse click, but main usage is to be shown when a
 Insert something after the content of each `<h1>` element
 Insert something before the content of each `<h1>` element
 
-```
+```html
 <style>
     h1::before {
         content: "Before h1 ";
@@ -834,7 +835,7 @@ Insert something before the content of each `<h1>` element
 
 Selects every `<p>` element that is the first child of its parent
 
-```
+```html
 <style>
     p:first-child {
         background: skyblue;
@@ -878,7 +879,7 @@ Differences from first-of-type is when first child is span in the last div: firs
 
 Selects every `<p>` element that is the first `<p>` element of its parent
 
-```
+```html
 <style>
     p:first-of-type {
         background: skyblue;
@@ -920,7 +921,7 @@ Selects every `<p>` element that is the first `<p>` element of its parent
 
 Selects the first letter of every `<p>` element
 
-```
+```html
 <style>
     p::first-letter {
         font-size: 30px;
@@ -970,7 +971,7 @@ Selects the first letter of every `<p>` element
 
 Selects the first line of every `<p>` element
 
-```
+```html
 <style>
     p::first-line {
         background: skyblue;
@@ -1023,7 +1024,7 @@ The same sentence, but only the top row is selected even if the number of words 
 
 Selects every `<p>` element that is the last child of its parent
 
-```
+```html
 <style>
     p:last-child {
         background: skyblue;
@@ -1065,7 +1066,7 @@ Selects every `<p>` element that is the last child of its parent
 
 Selects every `<p>` element that is the last `<p>` element of its parent
 
-```
+```html
 <style>
     p:last-of-type {
         background: skyblue;
