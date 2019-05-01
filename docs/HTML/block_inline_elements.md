@@ -1,5 +1,11 @@
 # Block and Inline Elements
 
+### Block / Inline elements CSS
+
+<hr>
+
+[Block / Inline CSS](../CSS/block_inline.md)
+
 ### Block Elements
 
 <hr>
