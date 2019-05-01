@@ -29,6 +29,7 @@
     -   [Size and Color](docs/CSS/size_color.md)
     -   [Font / Text Style](docs/CSS/font_text_style.md)
     -   [Box Model](docs/CSS/box_model.md)
+    -   [Block / Inline](docs/CSS/block_inline.md)
 
 -   [JavaScript](docs/JavaScript/index.md)
 
