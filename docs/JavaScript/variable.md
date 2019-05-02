@@ -138,21 +138,23 @@ Identifiers must follow these naming conventions:
 
 Reserved words:
 
-|                    |                    |            |           |        |            |
-| ------------------ | ------------------ | ---------- | --------- | ------ | ---------- |
-| arguments          | Array              | await      | Boolean   | break  | case       |
-| catch              | class              | const      | continue  | Date   | decodeURI  |
-| decodeURIComponent | debugger           | default    | delete    | do     | else       |
-| encodeURI          | encodeURIComponent | enum       | Error     | eval   | EvalError  |
-| export             | extents            | false      | finally   | for    | function   |
-| Function           | if                 | Implements | import    | in     | Infinity   |
-| isFinite           | isNaN              | instanceof | interface | JSON   | Math       |
-| NaN                | new                | null       | Number    | Object | package    |
-| parseFloat         | ParseInt           | protected  | private   | public | RangeError |
-| RefferenceError    | RegExp             | return     | string    | super  | switch     |
-| syntaxError        | this               | throw      | true      | try    | TypeError  |
-| typeof             | undefined          | URIError   | var       | void   | while      |
-| with               | yield              |            |           |        |            |
+|             |           |                    |            |                    |
+| ----------- | --------- | ------------------ | ---------- | ------------------ |
+| arguments   | Array     | await              | Boolean    | break              |
+| case        | catch     | class              | const      | continue           |
+| Date        | decodeURI | decodeURIComponent | debugger   | default            |
+| delete      | do        | else               | encodeURI  | encodeURIComponent |
+| enum        | Error     | eval               | EvalError  | export             |
+| extents     | false     | finally            | for        | function           |
+| Function    | if        | Implements         | import     | in                 |
+| Infinity    | isFinite  | isNaN              | instanceof | interface          |
+| JSON        | Math      | NaN                | new        | null               |
+| Number      | Object    | package            | parseFloat | ParseInt           |
+| protected   | private   | public             | RangeError | RefferenceError    |
+| RegExp      | return    | string             | super      | switch             |
+| syntaxError | this      | throw              | true       | try                |
+| TypeError   | typeof    | undefined          | URIError   | var                |
+| void        | while     | with               | yield      |                    |
 
 <hr>
 
