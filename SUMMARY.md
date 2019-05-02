@@ -33,7 +33,7 @@
 
 -   [JavaScript](docs/JavaScript/index.md)
 
-    -   [test](docs/JavaScript/test.md)
+    -   [Variable](docs/JavaScript/variable.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)
 
