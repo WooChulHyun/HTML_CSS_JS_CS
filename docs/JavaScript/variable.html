@@ -662,6 +662,234 @@
 <h3 id="variable">Variable</h3>
 <hr>
 
+<p>A variable is the name of a memory space or the memory space itself in which a value can be stored.</p>
+<blockquote>
+<p>Variable means anything that can vary. JavaScript includes variables which hold the data value and it can be changed anytime. JavaScript uses reserved keyword var to declare a variable. A variable must have a unique name.
+<em>(JavaScript Variables - Tutorials Teacher) </em></p>
+</blockquote>
+<h3 id="variable-declaration">Variable Declaration</h3>
+<hr>
+
+<p>Variable declaration means registering a variable name (identifier) to let the JavaScript engine know the existence of a variable and manage it.</p>
+<blockquote>
+<p>Identifier: Variable names are also called identifiers. An identifier is a unique name that can be used to identify and distinguish certain values. Just as you distinguish a person by a unique name, the value can be referenced by a variable name that is a unique identifier specified in a language that a person can understand. The term identifier is not only used for variables. For example, the names of variables, functions, and classes are all identifiers because they are names that can distinguish between values. Therefore, an identifier is a higher concept than a variable name. All identifiers, such as names of variables, functions, classes, etc., signal the presence of an identifier to the JavaScript engine by a &quot;declaration&quot;.</p>
+</blockquote>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a;
+<span class="hljs-keyword">var</span> b, c;
+</code></pre>
+<p>After declaring a variable, We have not yet assigned a value to the variable. Therefore, the memory space allocated by the variable declaration may be considered to be empty, but the allocated memory space is implicitly allocated with the value undefined by the JavaScript engine. This is a unique feature of JavaScript.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; undefined</span>
+</code></pre>
+<p>The JavaScript engine performs variable declarations in two steps:</p>
+<ol>
+<li><p>Declaration phase: Register a variable name to inform the JavaScript engine of the existence of a variable.</p>
+</li>
+<li><p>Initialization phase: Allocate memory space to store the value and implicitly assigns undefined.</p>
+</li>
+</ol>
+<p>If you do not go through the initialization phase, the reserved memory space may still contain values that were previously used by other applications. These values are called garbage values. Therefore, garbage value can be obtained by referring to a variable value immediately after allocating memory space and not allocating a value.</p>
+<h3 id="declaration--definition">Declaration / Definition</h3>
+<hr>
+
+<p>A definition is a definition of a variable by assigning a value to it.
+In other programming languages, strictly separate declarations and definitions.</p>
+<p>In C the declaration is to inform the existence of the identifier, and the definition is to clarify the identity of the identifier by assigning a value to the identifier.</p>
+<p>Variables in JavaScript are defined as undefined at the same time as declaration, so the distinction between declaration and definition is ambiguous. Therefore, JavaScript tends to use declarations and definitions in combination.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>; <span class="hljs-comment">// Declare a variable a and define a as 1</span>
+<span class="hljs-keyword">var</span> b; <span class="hljs-comment">// Declare the variable b. But internally b is defined as undefined.</span>
+b = <span class="hljs-number">1</span>; <span class="hljs-comment">// The variable b is defined as 1</span>
+</code></pre>
+<h3 id="difference-between-declaring-var-inside-window-and-not-declaring">Difference between declaring var inside window and not declaring.</h3>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; ReferenceError: a is not defined</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; 1</span>
+</code></pre>
+<pre><code class="lang-javascript">a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; 1</span>
+</code></pre>
+<p>The result is the same in here, but if you do not declare a variable, the JavaScript engine will automatically declare it as a variable(global variable).</p>
+<p>Global variables and local variables have different scope ranges, so if you use them without declaring variables, they can cause bugs later on.</p>
+<h3 id="hoisting-variable-declaration-hoisting">Hoisting (Variable declaration hoisting)</h3>
+<hr>
+
+<p>Variable hoisting is a unique feature of JavaScript that behaves as if the variable declaration is pulled to the beginning of the code.</p>
+<p>Programs are executed in order from the top to the bottom.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// undefined</span>
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; 1</span>
+</code></pre>
+<p>The variable a is not declared yet on the first line, so ReferenceError is likely to occur, but undefined is output.</p>
+<p>This is because even if you declare a variable in the middle of a program, the variable is created before another statement as declared at the beginning of the program. This is hoisting.</p>
+<p>Before I show you an example, let&apos;s take a look at the way the JavaScript engine works.</p>
+<p>When we type <code>var a = 1;</code>, JavaScript engine interpret as:</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a;
+a = <span class="hljs-number">1</span>;
+</code></pre>
+<p>Come back to hoisting again,</p>
+<p>===&gt; Your code</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// undefined</span>
+<span class="hljs-keyword">var</span> a = <span class="hljs-number">1</span>; <span class="hljs-comment">// Same as `var a;` `a = 1;`</span>
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; 1</span>
+</code></pre>
+<p>===&gt; JavaScript engine works</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// undefined</span>
+a = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(a); <span class="hljs-comment">// --&gt; 1</span>
+</code></pre>
+<p>Variable declarations are executed first in parsing-time, not at the run-time. That is, the JavaScript engine evaluates the entire code before executing the source code line by line. At this time, all declarations (variable declaration statements, function declaration statements, etc.) are found, and identifiers are registered and initialized. Then, run the source code one line at a time, except the declaration.</p>
+<h3 id="identifier-naming">Identifier Naming</h3>
+<hr>
+
+<p>Identifiers must follow these naming conventions:</p>
+<ol>
+<li><p>The available characters are alphabet(a to z, A to Z), numbers (0 to 9), underscore (_), dollar sign ($)</p>
+</li>
+<li><p>Numbers are not allowed in the first letter. That is, the first letter must be one of the following: an alphabet(a to z, A to Z), underscore (_), dollar sign ($)</p>
+</li>
+<li><p>Reserved words can not be used as identifiers.</p>
+</li>
+</ol>
+<p>Reserved words:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>arguments</td>
+<td>Array</td>
+<td>await</td>
+<td>Boolean</td>
+<td>break</td>
+<td>case</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>class</td>
+<td>const</td>
+<td>continue</td>
+<td>Date</td>
+<td>decodeURI</td>
+</tr>
+<tr>
+<td>decodeURIComponent</td>
+<td>debugger</td>
+<td>default</td>
+<td>delete</td>
+<td>do</td>
+<td>else</td>
+</tr>
+<tr>
+<td>encodeURI</td>
+<td>encodeURIComponent</td>
+<td>enum</td>
+<td>Error</td>
+<td>eval</td>
+<td>EvalError</td>
+</tr>
+<tr>
+<td>export</td>
+<td>extents</td>
+<td>false</td>
+<td>finally</td>
+<td>for</td>
+<td>function</td>
+</tr>
+<tr>
+<td>Function</td>
+<td>if</td>
+<td>Implements</td>
+<td>import</td>
+<td>in</td>
+<td>Infinity</td>
+</tr>
+<tr>
+<td>isFinite</td>
+<td>isNaN</td>
+<td>instanceof</td>
+<td>interface</td>
+<td>JSON</td>
+<td>Math</td>
+</tr>
+<tr>
+<td>NaN</td>
+<td>new</td>
+<td>null</td>
+<td>Number</td>
+<td>Object</td>
+<td>package</td>
+</tr>
+<tr>
+<td>parseFloat</td>
+<td>ParseInt</td>
+<td>protected</td>
+<td>private</td>
+<td>public</td>
+<td>RangeError</td>
+</tr>
+<tr>
+<td>RefferenceError</td>
+<td>RegExp</td>
+<td>return</td>
+<td>string</td>
+<td>super</td>
+<td>switch</td>
+</tr>
+<tr>
+<td>syntaxError</td>
+<td>this</td>
+<td>throw</td>
+<td>true</td>
+<td>try</td>
+<td>TypeError</td>
+</tr>
+<tr>
+<td>typeof</td>
+<td>undefined</td>
+<td>URIError</td>
+<td>var</td>
+<td>void</td>
+<td>while</td>
+</tr>
+<tr>
+<td>with</td>
+<td>yield</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr>
+
+<ul>
+<li>camelCase (lower camel case)</li>
+</ul>
+<p>Capitalize the first letter of the word after the second, and the rest in lower case.</p>
+<p>Ex) camelCase, newName</p>
+<ul>
+<li>PascalCase (upper camel case)</li>
+</ul>
+<p>The first letter of each word is capitalized and the rest are in lower case.</p>
+<p>Ex) PascalCase, NewName</p>
+<ul>
+<li>Underscore (snake case)</li>
+</ul>
+<p>All words are in lower case, and words and words are separated by Underscore(_).</p>
+<p>Ex) new_name</p>
+
                                 
                                 </section>
                             
@@ -704,7 +932,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Variable","level":"1.4.1","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"JavaScript","level":"1.4","depth":1,"path":"docs/JavaScript/index.md","ref":"docs/JavaScript/index.md","articles":[{"title":"Variable","level":"1.4.1","depth":2,"path":"docs/JavaScript/variable.md","ref":"docs/JavaScript/variable.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/variable.md","mtime":"2019-05-02T02:50:54.264Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-02T02:51:00.081Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Variable","level":"1.4.1","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"JavaScript","level":"1.4","depth":1,"path":"docs/JavaScript/index.md","ref":"docs/JavaScript/index.md","articles":[{"title":"Variable","level":"1.4.1","depth":2,"path":"docs/JavaScript/variable.md","ref":"docs/JavaScript/variable.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/variable.md","mtime":"2019-05-02T07:50:57.114Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-02T07:51:03.298Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
