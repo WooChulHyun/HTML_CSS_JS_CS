@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Git · Web Development Book</title>
+        <title>Memory Storage Structure · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="test.html" />
+    <link rel="next" href="../Computer_Science/" />
     
     
-    <link rel="prev" href="../Computer_Science/test.html" />
+    <link rel="prev" href="variable.html" />
     
 
     </head>
@@ -440,9 +440,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4" data-path="../JavaScript/">
+        <li class="chapter " data-level="1.4" data-path="./">
             
-                <a href="../JavaScript/">
+                <a href="./">
             
                     
                     JavaScript
@@ -454,9 +454,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.4.1" data-path="../JavaScript/variable.html">
+        <li class="chapter " data-level="1.4.1" data-path="variable.html">
             
-                <a href="../JavaScript/variable.html">
+                <a href="variable.html">
             
                     
                     Variable
@@ -467,9 +467,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.2" data-path="../JavaScript/memory_storage_structure.html">
+        <li class="chapter active" data-level="1.4.2" data-path="memory_storage_structure.html">
             
-                <a href="../JavaScript/memory_storage_structure.html">
+                <a href="memory_storage_structure.html">
             
                     
                     Memory Storage Structure
@@ -517,9 +517,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.6" data-path="./">
+        <li class="chapter " data-level="1.6" data-path="../Git/">
             
-                <a href="./">
+                <a href="../Git/">
             
                     
                     Git
@@ -531,9 +531,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.6.1" data-path="test.html">
+        <li class="chapter " data-level="1.6.1" data-path="../Git/test.html">
             
-                <a href="test.html">
+                <a href="../Git/test.html">
             
                     
                     test
@@ -656,7 +656,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Git</a>
+        <a href="../.." >Memory Storage Structure</a>
     </h1>
 </div>
 
@@ -671,7 +671,185 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-gh">index GH</h1>
+                                <h1 id="memory-storage-structure">Memory Storage Structure</h1>
+<h3 id="variables-and-memory-structures-1">Variables and memory structures 1</h3>
+<hr>
+
+<p>Variable is used to remember the memory address.</p>
+<p>A memory address is a kind of identifier that is used to distinguish between physical memory spaces.</p>
+<p>In other words, a memory address is a unique address that identifies the exact location in the memory space.</p>
+<p>When referring to a variable, it refers to the data stored in that address, not to the address in memory.</p>
+<p>Therefore, variables must remember not only the address of the memory where the data is stored, but also the information about the length and type of the stored data.</p>
+<p>The following figure shows how variables are stored in memory.</p>
+<p><img src="https://i.postimg.cc/GtX3zxDw/image.png"></p>
+<p>As shown in the figure above, one memory space stores one byte of data consisting of 8 bits.</p>
+<p>Therefore, the address of the memory is also incremented by 1 byte, and data is stored sequentially from the lowest address.</p>
+<p>In the figure above, the length of the variable contains 4 memory spaces in total, so 4 bytes of data are stored in the corresponding variable.</p>
+<p>At this point, the name of the variable will point to only the first memory address 0x10.</p>
+<p>Thus, the length of the variable is 4, and you must know how the variable is constructed so that the data can be referenced correctly in that variable.</p>
+<h3 id="variables-and-memory-structures-2">Variables and memory structures 2</h3>
+<hr>
+
+<p><img src="https://i.postimg.cc/jS25Cfsc/image.png"></p>
+<ul>
+<li>Code segment</li>
+</ul>
+<p>Code segment is the area where our code is loaded. The compiled machine language is entered.</p>
+<p>Read-only data</p>
+<p>CPU reads and processes commands in this area</p>
+<hr>
+
+<ul>
+<li>Data segment</li>
+</ul>
+<p>Data segment is where global variables, static variables are loaded.</p>
+<p>Allocated at the same time as program starts and extinguished from memory at program termination.</p>
+<hr>
+
+<ul>
+<li>Heap segment</li>
+</ul>
+<p>Heap segment is where memory is allocated dynamically. The size is determined at runtime.</p>
+<p>Storage space for reference type.</p>
+<hr>
+
+<ul>
+<li>Stack segment</li>
+</ul>
+<p>Stack segment is used to store local variables and parameters, and is returned when the function is called.</p>
+<p>Because when a function is called its memory is allocated so it is called a call stack.</p>
+<p>It is the first-in and last-out data structure.</p>
+<p>Size is determined at compile time.</p>
+<h3 id="memory-allocation-in-javascript">Memory Allocation in JavaScript</h3>
+<hr>
+
+<p>In JavaScript, in order to make allocate memory allotments easier for programmers, JavaScript allocates memory when declaring values.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> n = <span class="hljs-number">100</span>; <span class="hljs-comment">// Memory Allocation for Numbers</span>
+<span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;Hellow&quot;</span>; <span class="hljs-comment">// Memory Allocation for Characters</span>
+<span class="hljs-keyword">var</span> o = {
+    a: <span class="hljs-number">10</span>,
+    b: <span class="hljs-literal">null</span>
+}; <span class="hljs-comment">// Memory allocation for objects and their values</span>
+<span class="hljs-keyword">var</span> a = [<span class="hljs-number">10</span>, <span class="hljs-literal">null</span>, <span class="hljs-string">&quot;string&quot;</span>]; <span class="hljs-comment">// (Same as object)</span>
+<span class="hljs-comment">// Memory allocation for arrays and values in arrays</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">a</span>) </span>{
+    <span class="hljs-keyword">return</span> a + <span class="hljs-number">1</span>;
+} <span class="hljs-comment">// Allocation for functions (functions are &apos;callable&apos; objects)</span>
+
+<span class="hljs-comment">// Function expressions also allocate objects</span>
+someElement.addEventListener(
+    <span class="hljs-string">&quot;click&quot;</span>,
+    <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        someElement.style.backgroundColor = <span class="hljs-string">&quot;yellow&quot;</span>;
+    },
+    <span class="hljs-literal">false</span>
+);
+</code></pre>
+<hr>
+
+<p>Allocation via function call</p>
+<p>Memory allocation also occurs in some functions.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> d = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">// Allocate memory for a Date object</span>
+<span class="hljs-keyword">var</span> e = <span class="hljs-built_in">document</span>.createElement(<span class="hljs-string">&quot;div&quot;</span>); <span class="hljs-comment">// Allocate memory for DOM elements.</span>
+</code></pre>
+<p>Some methods also cause memory allocation to contain new values or objects.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> s = <span class="hljs-string">&quot;abcdefg&quot;</span>;
+<span class="hljs-keyword">var</span> s2 = s.substr(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// s2 is the new string</span>
+<span class="hljs-comment">// Since strings are immutable in JavaScript,</span>
+<span class="hljs-comment">// they do not allocate a new memory and simply store the range [0, 3].</span>
+
+<span class="hljs-keyword">var</span> a = [<span class="hljs-string">&quot;Hellow&quot;</span>, <span class="hljs-string">&quot;World&quot;</span>];
+<span class="hljs-keyword">var</span> a2 = [<span class="hljs-string">&quot;Hi&quot;</span>, <span class="hljs-string">&quot;World&quot;</span>];
+<span class="hljs-keyword">var</span> a3 = a.concat(a2); <span class="hljs-comment">// New array with 4 elements</span>
+</code></pre>
+<h3 id="variables-and-memory-structures-3">Variables and memory structures 3</h3>
+<hr>
+
+<h5 id="data-segment">Data segment</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>; <span class="hljs-comment">//Allocate to data segment</span>
+<span class="hljs-keyword">var</span> b = <span class="hljs-number">20</span>; <span class="hljs-comment">//Allocate to data segment</span>
+</code></pre>
+<p><img src="https://i.postimg.cc/MZ4mX3Gv/data.png"></p>
+<hr>
+
+<h5 id="stack-segment">Stack segment</h5>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> a = <span class="hljs-number">10</span>; <span class="hljs-comment">//Allocate to data segment</span>
+<span class="hljs-keyword">var</span> b = <span class="hljs-number">20</span>; <span class="hljs-comment">//Allocate to data segment</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func1</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-keyword">var</span> c = <span class="hljs-number">30</span>;
+    <span class="hljs-comment">//Local variable c allocated to the stack segment</span>
+
+    func2(c);
+    func3(c);
+
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func2</span>(<span class="hljs-params">d</span>) </span>{
+    <span class="hljs-keyword">var</span> e = <span class="hljs-number">40</span>;
+    <span class="hljs-comment">//The parameter d and the local variable e are allocated to the stack segment</span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">func2</span>(<span class="hljs-params">f</span>) </span>{
+    <span class="hljs-keyword">var</span> g = <span class="hljs-number">50</span>;
+    <span class="hljs-comment">//The parameter f and the local variable g are allocated to the stack segment</span>
+}
+</code></pre>
+<p><img src="https://i.postimg.cc/KYjvwfyy/3-1.png"></p>
+<p><img src="https://i.postimg.cc/nzQVcLzR/3-2.png"></p>
+<hr>
+
+<h5 id="heap-segment">Heap segment</h5>
+<p>Heap segment: A space that is useful when you need to determine the amount of memory to allocate during program execution (at runtime)</p>
+<p>Variables can store two types of data: primitive and reference values.</p>
+<p>Primitive values are simple data and are Undefined, Null, Boolean, number, and string. Because it manipulates the actual value stored in the variable, we can think that it is accessed by &apos;value&apos;. The primitive value has a fixed size and is stored in the stack memory.</p>
+<p>A reference value is an object that consists of multiple values and is stored in memory, and is stored in the heap memory. When manipulating an object, manipulate the &apos;reference&apos; for that object, not the object itself. Therefore, it is called &apos;access by reference&apos;.</p>
+<hr>
+
+<ul>
+<li>Dynamic Property</li>
+</ul>
+<p>The primitive values and reference values definitions similarly, but behave differently after assignment.</p>
+<p>When dealing with reference values, you can add, change, and delete properties and methods at any time, and access them until you destroy the object or remove the property. primitive values have no properties, only reference values can be added dynamically.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> name = <span class="hljs-string">&quot;coca&quot;</span>; <span class="hljs-comment">// primitive values</span>
+name.nickname = <span class="hljs-string">&quot;Cola&quot;</span>;
+
+<span class="hljs-keyword">var</span> person = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>(); <span class="hljs-comment">// reference values</span>
+person.nickname = <span class="hljs-string">&quot;cocaCola&quot;</span>;
+
+<span class="hljs-built_in">console</span>.log(name.nickname); <span class="hljs-comment">// undefined</span>
+<span class="hljs-built_in">console</span>.log(person.nickname); <span class="hljs-comment">// &apos;cocaCola&apos;</span>
+</code></pre>
+<hr>
+
+<ul>
+<li>Value copy</li>
+</ul>
+<p>Primitive value: Copying the value itself and creates another variable and assigns it to the new variable. Therefore, two variables are completely separated.</p>
+<p>Reference value: If you copy a reference value from one variable to another, pointer values that point to objects stored in the heap (memory used by the browser) are copied. So, both variables point to exactly the same object. Therefore, when one side is manipulated, it is reflected on the other side.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// Copying primitive value</span>
+<span class="hljs-keyword">var</span> origin = <span class="hljs-number">3</span>;
+<span class="hljs-keyword">var</span> clone = origin + <span class="hljs-number">2</span>;
+
+<span class="hljs-built_in">console</span>.log(origin); <span class="hljs-comment">// 3</span>
+<span class="hljs-built_in">console</span>.log(clone); <span class="hljs-comment">// 5</span>
+
+<span class="hljs-comment">// Copying reference value</span>
+<span class="hljs-keyword">var</span> origin = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Object</span>();
+<span class="hljs-keyword">var</span> clone = origin;
+
+origin.num = <span class="hljs-number">3</span>;
+clone.num = <span class="hljs-number">5</span>;
+
+<span class="hljs-built_in">console</span>.log(origin.num); <span class="hljs-comment">// 5</span>
+<span class="hljs-built_in">console</span>.log(clone.num); <span class="hljs-comment">// 5</span>
+</code></pre>
+<hr>
+
+<p>Need to know pointer.</p>
+<h3 id="garbage-collection">Garbage collection</h3>
+<hr>
 
                                 
                                 </section>
@@ -699,12 +877,12 @@
 
             
                 
-                <a href="../Computer_Science/test.html" class="navigation navigation-prev " aria-label="Previous page: test">
+                <a href="variable.html" class="navigation navigation-prev " aria-label="Previous page: Variable">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="test.html" class="navigation navigation-next " aria-label="Next page: test">
+                <a href="../Computer_Science/" class="navigation navigation-next " aria-label="Next page: Computer Science">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -715,7 +893,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Git","level":"1.6","depth":1,"next":{"title":"test","level":"1.6.1","depth":2,"path":"docs/Git/test.md","ref":"docs/Git/test.md","articles":[]},"previous":{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/Git/index.md","mtime":"2019-05-02T08:01:02.320Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-03T08:09:51.256Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Variable","level":"1.4.1","depth":2,"path":"docs/JavaScript/variable.md","ref":"docs/JavaScript/variable.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/memory_storage_structure.md","mtime":"2019-05-03T08:09:46.568Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-03T08:09:51.256Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

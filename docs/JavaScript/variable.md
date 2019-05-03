@@ -122,7 +122,7 @@ a = 1;
 console.log(a); // --> 1
 ```
 
-Variable declarations are executed first in parsing-time, not at the run-time. That is, the JavaScript engine evaluates the entire code before executing the source code line by line. At this time, all declarations (variable declaration statements, function declaration statements, etc.) are found, and identifiers are registered and initialized. Then, run the source code one line at a time, except the declaration.
+Variable declarations are executed first in parsing-time(before run-time), not at the run-time. That is, the JavaScript engine evaluates the entire code before executing the source code line by line. At this time, all declarations (variable declaration statements, function declaration statements, etc.) are found, and identifiers are registered and initialized. Then, run the source code one line at a time, except the declaration.
 
 ### Identifier Naming
 
