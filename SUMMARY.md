@@ -34,6 +34,7 @@
 -   [JavaScript](docs/JavaScript/index.md)
 
     -   [Variable](docs/JavaScript/variable.md)
+    -   [Memory Storage Structure](docs/JavaScript/memory_storage_structure.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)
 
