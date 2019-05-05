@@ -35,6 +35,7 @@
 
     -   [Variable](docs/JavaScript/variable.md)
     -   [Memory Storage Structure](docs/JavaScript/memory_storage_structure.md)
+    -   [let, const](docs/JavaScript/let_const.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)
 
