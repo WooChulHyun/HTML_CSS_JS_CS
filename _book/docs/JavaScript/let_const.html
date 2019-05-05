@@ -1,0 +1,1042 @@
+
+<!DOCTYPE HTML>
+<html lang="en, ko" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>let, const · Web Development Book</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="Woochul Hyun">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="../../styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../Computer_Science/" />
+    
+    
+    <link rel="prev" href="memory_storage_structure.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://github.com/WooChulHyun" target="_blank" class="custom-link">GitHub</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../HTML/">
+            
+                <a href="../HTML/">
+            
+                    
+                    HTML
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../HTML/useful_website.html">
+            
+                <a href="../HTML/useful_website.html">
+            
+                    
+                    Useful Website
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../HTML/meta_tag.html">
+            
+                <a href="../HTML/meta_tag.html">
+            
+                    
+                    meta Tag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../HTML/block_inline_elements.html">
+            
+                <a href="../HTML/block_inline_elements.html">
+            
+                    
+                    Block, Inline Elements
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../HTML/character_entity_references.html">
+            
+                <a href="../HTML/character_entity_references.html">
+            
+                    
+                    Character Entity References
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../HTML/syntax_highlighting.html">
+            
+                <a href="../HTML/syntax_highlighting.html">
+            
+                    
+                    Syntax Highlighting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../HTML/text_tag.html">
+            
+                <a href="../HTML/text_tag.html">
+            
+                    
+                    Text Tags
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../HTML/abbr_dfn_cite_small.html">
+            
+                <a href="../HTML/abbr_dfn_cite_small.html">
+            
+                    
+                    abbr, dfn, cite, small
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../HTML/ruby_tag.html">
+            
+                <a href="../HTML/ruby_tag.html">
+            
+                    
+                    ruby Tag
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../HTML/time_expression.html">
+            
+                <a href="../HTML/time_expression.html">
+            
+                    
+                    Time Expression
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../HTML/address.html">
+            
+                <a href="../HTML/address.html">
+            
+                    
+                    address
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.11" data-path="../HTML/quotation.html">
+            
+                <a href="../HTML/quotation.html">
+            
+                    
+                    Quotation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.12" data-path="../HTML/pre.html">
+            
+                <a href="../HTML/pre.html">
+            
+                    
+                    pre
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.13" data-path="../HTML/list.html">
+            
+                <a href="../HTML/list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="../HTML/table.html">
+            
+                <a href="../HTML/table.html">
+            
+                    
+                    Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.15" data-path="../HTML/a.html">
+            
+                <a href="../HTML/a.html">
+            
+                    
+                    a
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.16" data-path="../HTML/form_control.html">
+            
+                <a href="../HTML/form_control.html">
+            
+                    
+                    Form Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.17" data-path="../HTML/html5_form_control.html">
+            
+                <a href="../HTML/html5_form_control.html">
+            
+                    
+                    HTML5 new Form Control
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../CSS/">
+            
+                <a href="../CSS/">
+            
+                    
+                    CSS
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../CSS/useful_website.html">
+            
+                <a href="../CSS/useful_website.html">
+            
+                    
+                    Useful Website
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../CSS/css_selector.html">
+            
+                <a href="../CSS/css_selector.html">
+            
+                    
+                    CSS Selector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../CSS/size_color.html">
+            
+                <a href="../CSS/size_color.html">
+            
+                    
+                    Size and Color
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../CSS/font_text_style.html">
+            
+                <a href="../CSS/font_text_style.html">
+            
+                    
+                    Font / Text Style
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../CSS/box_model.html">
+            
+                <a href="../CSS/box_model.html">
+            
+                    
+                    Box Model
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../CSS/block_inline.html">
+            
+                <a href="../CSS/block_inline.html">
+            
+                    
+                    Block / Inline
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    JavaScript
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="variable.html">
+            
+                <a href="variable.html">
+            
+                    
+                    Variable
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="memory_storage_structure.html">
+            
+                <a href="memory_storage_structure.html">
+            
+                    
+                    Memory Storage Structure
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.4.3" data-path="let_const.html">
+            
+                <a href="let_const.html">
+            
+                    
+                    let, const
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../Computer_Science/">
+            
+                <a href="../Computer_Science/">
+            
+                    
+                    Computer Science
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../Computer_Science/test.html">
+            
+                <a href="../Computer_Science/test.html">
+            
+                    
+                    test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="../Git/">
+            
+                <a href="../Git/">
+            
+                    
+                    Git
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="../Git/test.html">
+            
+                <a href="../Git/test.html">
+            
+                    
+                    test
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../VSCode/">
+            
+                <a href="../VSCode/">
+            
+                    
+                    VSCode
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../VSCode/useful_extensions.html">
+            
+                <a href="../VSCode/useful_extensions.html">
+            
+                    
+                    Useful Extensions
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../GitBook/">
+            
+                <a href="../GitBook/">
+            
+                    
+                    GitBook
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../GitBook/gitbook_on_gitHub.html">
+            
+                <a href="../GitBook/gitbook_on_gitHub.html">
+            
+                    
+                    GitBook on GitHub
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../GitBook/gitbook_setting.html">
+            
+                <a href="../GitBook/gitbook_setting.html">
+            
+                    
+                    GitBook Setting
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >let, const</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="let-const">let, const</h1>
+<h3 id="var-vs-let-const">var VS let, const</h3>
+<hr>
+
+<p>The only way to declare variables up to ES5 was to use the &apos;var&apos; keyword. Variables declared with the &apos;var&apos; keyword have the following characteristics.
+<br>
+<br></p>
+<ul>
+<li>Function-level scope</li>
+</ul>
+<p>&apos;var&apos; recognize only the code block of the function as a scope. Therefore, all variables created outside the global function are global variables.</p>
+<p>Variables declared in the for statement can be referenced outside the code code block of the for statement.
+<br>
+<br></p>
+<ul>
+<li>Allow omission of the &apos;var&apos; keyword</li>
+</ul>
+<p>There is a good chance of mass-producing implicit global variables.
+<br>
+<br></p>
+<ul>
+<li>Allow Re-Declaring variables</li>
+</ul>
+<p>There is a strong possibility that an unintended variable value change.
+<br>
+<br></p>
+<ul>
+<li>Variable hoisting</li>
+</ul>
+<p>You can reference variables before declaring.
+<br>
+<br></p>
+<p>Most problems are caused by global variables. Global variables have the advantage of being easy to use for simple applications, but it should be suppressed except in unavoidable circumstances. Global variables have a broad scope, which makes it difficult to determine where and how they will be used, and may cause unintended changes by an impure function, which increases complexity. Therefore, the narrower the scope of the variable is better.</p>
+<p>ES6 introduced the &apos;let&apos; and &apos;const&apos; keywords to compensate for the shortcomings of the var keyword.</p>
+<h3 id="let">let</h3>
+<hr>
+
+<h4 id="block-level-scope">Block-level scope</h4>
+<hr>
+
+<p>Most programming languages follow a block-level scope, but JavaScript(&apos;var&apos;) follows a function-level scope.</p>
+<ul>
+<li>Function-level scope(&apos;var&apos;):</li>
+</ul>
+<p>Variables declared within a function are valid only within the function and can not be referenced outside the function. That is, a variable declared inside a function is a local variable, and all variables declared outside the function are global variables.
+<br>
+<br></p>
+<ul>
+<li>Block-level scope(&apos;let&apos;, &apos;const&apos;):</li>
+</ul>
+<p>Variables declared in all code blocks (functions, if statements, for statements, while statements, try / catch statements, etc.) are only valid within the code block and can not be referenced outside the code block. That is, variables declared inside a code block are local variables.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;outer x&quot;</span>; <span class="hljs-comment">// global variable</span>
+{
+    <span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;inner x&quot;</span>; <span class="hljs-comment">// global variable</span>
+    <span class="hljs-keyword">var</span> y = <span class="hljs-string">&quot;inner y&quot;</span>; <span class="hljs-comment">// global variable</span>
+
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+    <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-string">&quot;outer x&quot;</span>; <span class="hljs-comment">// global variable</span>
+{
+    <span class="hljs-keyword">let</span> x = <span class="hljs-string">&quot;inner x&quot;</span>; <span class="hljs-comment">// local variable</span>
+    <span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;inner y&quot;</span>; <span class="hljs-comment">// local variable</span>
+
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+    <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// outer x</span>
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// ReferenceError: y is not defined</span>
+</code></pre>
+<h4 id="not-allow-re-declaring-variables">Not allow Re-Declaring variables</h4>
+<hr>
+
+<p>You could declare a variable with the same name as the &apos;var&apos; keyword. However, the &apos;let&apos; keyword can not declare duplicate variables with the same name. SyntaxError occurs if you declare variables more than once.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;abc&quot;</span>;
+<span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;def&quot;</span>; <span class="hljs-comment">// Allow Re-Declaring variables</span>
+
+<span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;abc&quot;</span>;
+<span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;def&quot;</span>; <span class="hljs-comment">// Uncaught SyntaxError: Identifier &apos;y&apos; has already been declared</span>
+</code></pre>
+<h4 id="hoisting">Hoisting</h4>
+<hr>
+
+<p>Javascript hoists all declarations (var, let, const, function, class) including let and const introduced in ES6.</p>
+<p>However, unlike a variable declared with the &apos;var&apos; keyword, a reference error occurs if a variable declared with the &apos;let&apos; keyword when you reference the variable before the declaration. This is because the variable declared with the let keyword falls into the Temporal Dead Zone (TDZ) from the start of the scope to the declaration of the variable.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+<span class="hljs-keyword">var</span> x;
+
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// Error: Uncaught ReferenceError: y is not defined</span>
+<span class="hljs-keyword">let</span> y;
+</code></pre>
+<p>The variable is created in three steps:</p>
+<ul>
+<li>Declaration phase</li>
+</ul>
+<p>Register the variable in the execution context of Variable Object. This variable object is the target to which the scope refers.
+<br>
+<br></p>
+<ul>
+<li>Initialization phase</li>
+</ul>
+<p>It allocate memory space for variable registered in Variable Object. At this stage, the variable is initialized to &apos;undefined&apos;.
+<br>
+<br></p>
+<ul>
+<li>Assignment phase</li>
+</ul>
+<p>Assign the actual value to the variable initialized with &apos;undefined&apos;.</p>
+<hr>
+
+<p>Variables declared with the &apos;var&apos; keyword are declared and initialized at once. That is, register the variable in the scope (declaration step), allocate space for the variable in memory, and initialize it with &apos;undefined&apos; (initialization step). Therefore, even if the variable is accessed before the variable declaration, no error occurs because the variable exists in the scope. It just returns &apos;undefined&apos;. The variable is assigned a value when it reaches the variable assignment statement. This phenomenon is called variable hoisting.</p>
+<p>Our code:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-keyword">var</span> x;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>===&gt; javascript works</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x; <span class="hljs-comment">// Hoisting / Declared, Initialized</span>
+<span class="hljs-comment">// At the beginning of the scope, the declaration and initialization steps are executed.</span>
+<span class="hljs-comment">// So you can refer to a variable before the variable declaration.</span>
+
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-keyword">var</span> x; <span class="hljs-comment">// Hoisted</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign is executed in the assignment statement.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<hr>
+
+<p>Variables declared with the &apos;let&apos; keyword proceed separately from the declaration phase and the initialization phase. In other words, the variable is registered in the scope (declaration step) but the initialization step is done when reaches the variable statement. If you try to access a variable before initialization, a reference error (ReferenceError) occurs. This is because the variable has not been initialized yet. In other words, the memory space for the variables is not yet allocated. Therefore, variables can not be referenced from the start point of the scope to the initialization point. The interval from the start point of the scope to the initialization start point is called &apos;Temporal Dead Zone (TDZ)&apos;.</p>
+<p>Our code:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+
+<span class="hljs-keyword">let</span> x;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>===&gt; javascript works</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x; <span class="hljs-comment">// Hoisting / Declared / TDZ</span>
+<span class="hljs-comment">// At the beginning of the scope, only the declaration is executed.</span>
+<span class="hljs-comment">// So you are not able to refer before the variable declaration statement.</span>
+
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+
+<span class="hljs-keyword">let</span> x; <span class="hljs-comment">// Hoisted / declaration statement / Initialization is executed.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign is executed in the assignment statement.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>As a result, ES6 does not seem to be different from the case where hoisting does not occur. But it is not. Consider the example below.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+    <span class="hljs-keyword">var</span> x = <span class="hljs-number">2</span>; <span class="hljs-comment">// global variable</span>
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+    <span class="hljs-keyword">let</span> x = <span class="hljs-number">2</span>; <span class="hljs-comment">// local variable</span>
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<h4 id="closure">Closure</h4>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> funcs = [];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+    funcs.push(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+    });
+    <span class="hljs-built_in">console</span>.log(funcs[i]());
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) {
+    funcs[j]();
+}
+
+<span class="hljs-built_in">console</span>.log(funcs);
+</code></pre>
+<p>Result:</p>
+<pre><code class="lang-javascript"><span class="hljs-number">0</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 0 now</span>
+<span class="hljs-comment">// Example result = [0]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">1</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 1 now</span>
+<span class="hljs-comment">// Example result = [1, 1]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">2</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 2 now</span>
+<span class="hljs-comment">// Example result = [2, 2, 2]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">3</span>; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+<span class="hljs-number">3</span>; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+<span class="hljs-number">3</span>;
+[([<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>])]; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+</code></pre>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> funcs = [];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+    funcs.push(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+    });
+    <span class="hljs-built_in">console</span>.log(funcs[i]());
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) {
+    funcs[j]();
+}
+
+<span class="hljs-built_in">console</span>.log(funcs);
+</code></pre>
+<p>Result:</p>
+<pre><code class="lang-javascript"><span class="hljs-number">0</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">1</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0, 1]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">2</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0, 1, 2]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">0</span>;
+<span class="hljs-number">1</span>;
+<span class="hljs-number">2</span>;
+[([<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>])];
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="memory_storage_structure.html" class="navigation navigation-prev " aria-label="Previous page: Memory Storage Structure">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../Computer_Science/" class="navigation navigation-next " aria-label="Next page: Computer Science">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"let, const","level":"1.4.3","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"path":"docs/JavaScript/memory_storage_structure.md","ref":"docs/JavaScript/memory_storage_structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/let_const.md","mtime":"2019-05-05T14:24:01.244Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T14:24:24.623Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+
+    </body>
+</html>
+
