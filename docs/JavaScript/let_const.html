@@ -685,11 +685,281 @@
                                 <section class="normal markdown-section">
                                 
                                 <h1 id="let-const">let, const</h1>
-<h3 id="let-const">let, const</h3>
+<h3 id="var-vs-let-const">var VS let, const</h3>
 <hr>
 
+<p>The only way to declare variables up to ES5 was to use the &apos;var&apos; keyword. Variables declared with the &apos;var&apos; keyword have the following characteristics.
+<br>
+<br></p>
+<ul>
+<li>Function-level scope</li>
+</ul>
+<p>&apos;var&apos; recognize only the code block of the function as a scope. Therefore, all variables created outside the global function are global variables.</p>
+<p>Variables declared in the for statement can be referenced outside the code code block of the for statement.
+<br>
+<br></p>
+<ul>
+<li>Allow omission of the &apos;var&apos; keyword</li>
+</ul>
+<p>There is a good chance of mass-producing implicit global variables.
+<br>
+<br></p>
+<ul>
+<li>Allow Re-Declaring variables</li>
+</ul>
+<p>There is a strong possibility that an unintended variable value change.
+<br>
+<br></p>
+<ul>
+<li>Variable hoisting</li>
+</ul>
+<p>You can reference variables before declaring.
+<br>
+<br></p>
+<p>Most problems are caused by global variables. Global variables have the advantage of being easy to use for simple applications, but it should be suppressed except in unavoidable circumstances. Global variables have a broad scope, which makes it difficult to determine where and how they will be used, and may cause unintended changes by an impure function, which increases complexity. Therefore, the narrower the scope of the variable is better.</p>
+<p>ES6 introduced the &apos;let&apos; and &apos;const&apos; keywords to compensate for the shortcomings of the var keyword.</p>
 <h3 id="let">let</h3>
 <hr>
+
+<h4 id="block-level-scope">Block-level scope</h4>
+<hr>
+
+<p>Most programming languages follow a block-level scope, but JavaScript(&apos;var&apos;) follows a function-level scope.</p>
+<ul>
+<li>Function-level scope(&apos;var&apos;):</li>
+</ul>
+<p>Variables declared within a function are valid only within the function and can not be referenced outside the function. That is, a variable declared inside a function is a local variable, and all variables declared outside the function are global variables.
+<br>
+<br></p>
+<ul>
+<li>Block-level scope(&apos;let&apos;, &apos;const&apos;):</li>
+</ul>
+<p>Variables declared in all code blocks (functions, if statements, for statements, while statements, try / catch statements, etc.) are only valid within the code block and can not be referenced outside the code block. That is, variables declared inside a code block are local variables.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;outer x&quot;</span>; <span class="hljs-comment">// global variable</span>
+{
+    <span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;inner x&quot;</span>; <span class="hljs-comment">// global variable</span>
+    <span class="hljs-keyword">var</span> y = <span class="hljs-string">&quot;inner y&quot;</span>; <span class="hljs-comment">// global variable</span>
+
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+    <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-string">&quot;outer x&quot;</span>; <span class="hljs-comment">// global variable</span>
+{
+    <span class="hljs-keyword">let</span> x = <span class="hljs-string">&quot;inner x&quot;</span>; <span class="hljs-comment">// local variable</span>
+    <span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;inner y&quot;</span>; <span class="hljs-comment">// local variable</span>
+
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// inner x</span>
+    <span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// inner y</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// outer x</span>
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// ReferenceError: y is not defined</span>
+</code></pre>
+<h4 id="not-allow-re-declaring-variables">Not allow Re-Declaring variables</h4>
+<hr>
+
+<p>You could declare a variable with the same name as the &apos;var&apos; keyword. However, the &apos;let&apos; keyword can not declare duplicate variables with the same name. SyntaxError occurs if you declare variables more than once.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;abc&quot;</span>;
+<span class="hljs-keyword">var</span> x = <span class="hljs-string">&quot;def&quot;</span>; <span class="hljs-comment">// Allow Re-Declaring variables</span>
+
+<span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;abc&quot;</span>;
+<span class="hljs-keyword">let</span> y = <span class="hljs-string">&quot;def&quot;</span>; <span class="hljs-comment">// Uncaught SyntaxError: Identifier &apos;y&apos; has already been declared</span>
+</code></pre>
+<h4 id="hoisting">Hoisting</h4>
+<hr>
+
+<p>Javascript hoists all declarations (var, let, const, function, class) including let and const introduced in ES6.</p>
+<p>However, unlike a variable declared with the &apos;var&apos; keyword, a reference error occurs if a variable declared with the &apos;let&apos; keyword when you reference the variable before the declaration. This is because the variable declared with the let keyword falls into the Temporal Dead Zone (TDZ) from the start of the scope to the declaration of the variable.</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+<span class="hljs-keyword">var</span> x;
+
+<span class="hljs-built_in">console</span>.log(y); <span class="hljs-comment">// Error: Uncaught ReferenceError: y is not defined</span>
+<span class="hljs-keyword">let</span> y;
+</code></pre>
+<p>The variable is created in three steps:</p>
+<ul>
+<li>Declaration phase</li>
+</ul>
+<p>Register the variable in the execution context of Variable Object. This variable object is the target to which the scope refers.
+<br>
+<br></p>
+<ul>
+<li>Initialization phase</li>
+</ul>
+<p>It allocate memory space for variable registered in Variable Object. At this stage, the variable is initialized to &apos;undefined&apos;.
+<br>
+<br></p>
+<ul>
+<li>Assignment phase</li>
+</ul>
+<p>Assign the actual value to the variable initialized with &apos;undefined&apos;.</p>
+<hr>
+
+<p>Variables declared with the &apos;var&apos; keyword are declared and initialized at once. That is, register the variable in the scope (declaration step), allocate space for the variable in memory, and initialize it with &apos;undefined&apos; (initialization step). Therefore, even if the variable is accessed before the variable declaration, no error occurs because the variable exists in the scope. It just returns &apos;undefined&apos;. The variable is assigned a value when it reaches the variable assignment statement. This phenomenon is called variable hoisting.</p>
+<p>Our code:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-keyword">var</span> x;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>===&gt; javascript works</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x; <span class="hljs-comment">// Hoisting / Declared, Initialized</span>
+<span class="hljs-comment">// At the beginning of the scope, the declaration and initialization steps are executed.</span>
+<span class="hljs-comment">// So you can refer to a variable before the variable declaration.</span>
+
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-keyword">var</span> x; <span class="hljs-comment">// Hoisted</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign is executed in the assignment statement.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<hr>
+
+<p>Variables declared with the &apos;let&apos; keyword proceed separately from the declaration phase and the initialization phase. In other words, the variable is registered in the scope (declaration step) but the initialization step is done when reaches the variable statement. If you try to access a variable before initialization, a reference error (ReferenceError) occurs. This is because the variable has not been initialized yet. In other words, the memory space for the variables is not yet allocated. Therefore, variables can not be referenced from the start point of the scope to the initialization point. The interval from the start point of the scope to the initialization start point is called &apos;Temporal Dead Zone (TDZ)&apos;.</p>
+<p>Our code:</p>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+
+<span class="hljs-keyword">let</span> x;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>;
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>===&gt; javascript works</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x; <span class="hljs-comment">// Hoisting / Declared / TDZ</span>
+<span class="hljs-comment">// At the beginning of the scope, only the declaration is executed.</span>
+<span class="hljs-comment">// So you are not able to refer before the variable declaration statement.</span>
+
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+
+<span class="hljs-keyword">let</span> x; <span class="hljs-comment">// Hoisted / declaration statement / Initialization is executed.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// undefined</span>
+
+x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign is executed in the assignment statement.</span>
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<p>As a result, ES6 does not seem to be different from the case where hoisting does not occur. But it is not. Consider the example below.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+    <span class="hljs-keyword">var</span> x = <span class="hljs-number">2</span>; <span class="hljs-comment">// global variable</span>
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">1</span>; <span class="hljs-comment">// global variable</span>
+
+{
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// ReferenceError: x is not defined</span>
+    <span class="hljs-keyword">let</span> x = <span class="hljs-number">2</span>; <span class="hljs-comment">// local variable</span>
+    <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 2</span>
+}
+<span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 1</span>
+</code></pre>
+<h4 id="closure">Closure</h4>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> funcs = [];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+    funcs.push(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+    });
+    <span class="hljs-built_in">console</span>.log(funcs[i]());
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) {
+    funcs[j]();
+}
+
+<span class="hljs-built_in">console</span>.log(funcs);
+</code></pre>
+<p>Result:</p>
+<pre><code class="lang-javascript"><span class="hljs-number">0</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 0 now</span>
+<span class="hljs-comment">// Example result = [0]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">1</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 1 now</span>
+<span class="hljs-comment">// Example result = [1, 1]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">2</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// global variable &apos;i&apos; is 2 now</span>
+<span class="hljs-comment">// Example result = [2, 2, 2]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">3</span>; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+<span class="hljs-number">3</span>; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+<span class="hljs-number">3</span>;
+[([<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>])]; <span class="hljs-comment">// because global variable &apos;i&apos; is 3</span>
+</code></pre>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> funcs = [];
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">3</span>; i++) {
+    funcs.push(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+        <span class="hljs-built_in">console</span>.log(i);
+    });
+    <span class="hljs-built_in">console</span>.log(funcs[i]());
+}
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">3</span>; j++) {
+    funcs[j]();
+}
+
+<span class="hljs-built_in">console</span>.log(funcs);
+</code></pre>
+<p>Result:</p>
+<pre><code class="lang-javascript"><span class="hljs-number">0</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">1</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0, 1]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">2</span>; <span class="hljs-comment">// funcs = [[function (console.log(i))], [function (console.log(i))], [function (console.log(i))]]</span>
+<span class="hljs-comment">// variable &apos;i&apos; is not affected because it is outside the of the local scope.</span>
+<span class="hljs-comment">// Example result = [0, 1, 2]</span>
+
+<span class="hljs-literal">undefined</span>; <span class="hljs-comment">//because no return in</span>
+<span class="hljs-comment">// function() {console.log(i);};</span>
+
+<span class="hljs-number">0</span>;
+<span class="hljs-number">1</span>;
+<span class="hljs-number">2</span>;
+[([<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>])];
+</code></pre>
 
                                 
                                 </section>
@@ -733,7 +1003,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"let, const","level":"1.4.3","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"path":"docs/JavaScript/memory_storage_structure.md","ref":"docs/JavaScript/memory_storage_structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/let_const.md","mtime":"2019-05-05T11:45:22.151Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T11:45:27.684Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"let, const","level":"1.4.3","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"path":"docs/JavaScript/memory_storage_structure.md","ref":"docs/JavaScript/memory_storage_structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/let_const.md","mtime":"2019-05-05T14:26:48.692Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T14:26:55.407Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
