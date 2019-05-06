@@ -49,7 +49,7 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../Computer_Science/" />
+    <link rel="next" href="data_type.html" />
     
     
     <link rel="prev" href="memory_storage_structure.html" />
@@ -486,6 +486,19 @@
             
                     
                     let, const
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="data_type.html">
+            
+                <a href="data_type.html">
+            
+                    
+                    Data type
             
                 </a>
             
@@ -960,6 +973,51 @@ x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign
 <span class="hljs-number">2</span>;
 [([<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>], [<span class="hljs-built_in">Function</span>])];
 </code></pre>
+<h4 id="global-objects-and-let">Global objects and let</h4>
+<hr>
+
+<p>A global object is the only top-level object of all objects, usually a window object in the browser-side and a global object in the Server-side (Node.js).</p>
+<p>If a variable declared with the &apos;var&apos; keyword is used as a global variable, it becomes a property of the global object.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> x = <span class="hljs-number">123</span>; <span class="hljs-comment">// Global variable</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.x); <span class="hljs-comment">// 123</span>
+</code></pre>
+<p>If a variable declared with the &apos;let&apos; keyword is used as a global variable, the let global variable is not a property of the global object. In other words, it can not be accessed like window.x. let global variables exist in an invisible conceptual block.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x = <span class="hljs-number">123</span>; <span class="hljs-comment">// Global variable</span>
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">window</span>.x); <span class="hljs-comment">// undefined</span>
+</code></pre>
+<h3 id="const">const</h3>
+<hr>
+
+<p>&apos;const&apos; is used for constants (unchangeable values). However, it is not always used for constants. &apos;const&apos; is mostly identical to let.</p>
+<h4 id="declaration-and-initialization">Declaration and initialization</h4>
+<hr>
+
+<p>&apos;let&apos; is free to reassign, but &apos;const&apos; is not re-assignable.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> x = <span class="hljs-number">123</span>;
+x = <span class="hljs-number">456</span>; <span class="hljs-comment">// TypeError: Assignment to constant variable.</span>
+</code></pre>
+<p>&apos;const&apos; must be assigned at the same time as declaration. Otherwise, SyntaxError occurs.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> x; <span class="hljs-comment">// SyntaxError: Missing initializer in const declaration</span>
+</code></pre>
+<h4 id="const-and-objects">const and objects</h4>
+<hr>
+
+<p>&apos;const&apos; is not able to be reassigned. This means that if the type of the &apos;const&apos; variable is an object, it can not change the reference to the object. However, the properties of the object are not protected. In other words, it is impossible to reassign, but you can change the contents of the assigned object (adding, removing, changing property values).</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> animal = { animal1: <span class="hljs-string">&quot;lion&quot;</span> };
+<span class="hljs-keyword">const</span> alphabet = [<span class="hljs-string">&quot;a&quot;</span>];
+
+<span class="hljs-comment">// animal = {}; // TypeError: Assignment to constant variable.</span>
+
+animal.animal1 = <span class="hljs-string">&quot;tiger&quot;</span>;
+animal.animal2 = <span class="hljs-string">&quot;turtle&quot;</span>;
+alphabet.push(<span class="hljs-string">&quot;b&quot;</span>);
+
+<span class="hljs-built_in">console</span>.log(animal); <span class="hljs-comment">// {animal1: &quot;tiger&quot;, animal2: &quot;turtle&quot;}</span>
+<span class="hljs-built_in">console</span>.log(alphabet); <span class="hljs-comment">// [&quot;a&quot;, &quot;b&quot;]</span>
+</code></pre>
+<p>Even if the contents of the object are changed, the address value allocated to the object type variable is not changed. Therefore, it is better to use &apos;const&apos; for object type variable declaration. If you need to explicitly change the address value(reallocated) of an object type variable, use &apos;let&apos;.</p>
 
                                 
                                 </section>
@@ -992,7 +1050,7 @@ x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign
                 </a>
                 
                 
-                <a href="../Computer_Science/" class="navigation navigation-next " aria-label="Next page: Computer Science">
+                <a href="data_type.html" class="navigation navigation-next " aria-label="Next page: Data type">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1003,7 +1061,7 @@ x = <span class="hljs-number">1</span>; <span class="hljs-comment">// The assign
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"let, const","level":"1.4.3","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"path":"docs/JavaScript/memory_storage_structure.md","ref":"docs/JavaScript/memory_storage_structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/let_const.md","mtime":"2019-05-05T14:24:01.244Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-05T14:24:24.623Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"let, const","level":"1.4.3","depth":2,"next":{"title":"Data type","level":"1.4.4","depth":2,"path":"docs/JavaScript/data_type.md","ref":"docs/JavaScript/data_type.md","articles":[]},"previous":{"title":"Memory Storage Structure","level":"1.4.2","depth":2,"path":"docs/JavaScript/memory_storage_structure.md","ref":"docs/JavaScript/memory_storage_structure.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/let_const.md","mtime":"2019-05-06T06:27:31.722Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-06T08:39:39.449Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

@@ -328,3 +328,70 @@ undefined; //because no return in
 2;
 [([Function], [Function], [Function])];
 ```
+
+#### Global objects and let
+
+<hr>
+
+A global object is the only top-level object of all objects, usually a window object in the browser-side and a global object in the Server-side (Node.js).
+
+If a variable declared with the 'var' keyword is used as a global variable, it becomes a property of the global object.
+
+```javascript
+var x = 123; // Global variable
+
+console.log(window.x); // 123
+```
+
+If a variable declared with the 'let' keyword is used as a global variable, the let global variable is not a property of the global object. In other words, it can not be accessed like window.x. let global variables exist in an invisible conceptual block.
+
+```javascript
+let x = 123; // Global variable
+
+console.log(window.x); // undefined
+```
+
+### const
+
+<hr>
+
+'const' is used for constants (unchangeable values). However, it is not always used for constants. 'const' is mostly identical to let.
+
+#### Declaration and initialization
+
+<hr>
+
+'let' is free to reassign, but 'const' is not re-assignable.
+
+```javascript
+const x = 123;
+x = 456; // TypeError: Assignment to constant variable.
+```
+
+'const' must be assigned at the same time as declaration. Otherwise, SyntaxError occurs.
+
+```javascript
+const x; // SyntaxError: Missing initializer in const declaration
+```
+
+#### const and objects
+
+<hr>
+
+'const' is not able to be reassigned. This means that if the type of the 'const' variable is an object, it can not change the reference to the object. However, the properties of the object are not protected. In other words, it is impossible to reassign, but you can change the contents of the assigned object (adding, removing, changing property values).
+
+```javascript
+const animal = { animal1: "lion" };
+const alphabet = ["a"];
+
+// animal = {}; // TypeError: Assignment to constant variable.
+
+animal.animal1 = "tiger";
+animal.animal2 = "turtle";
+alphabet.push("b");
+
+console.log(animal); // {animal1: "tiger", animal2: "turtle"}
+console.log(alphabet); // ["a", "b"]
+```
+
+Even if the contents of the object are changed, the address value allocated to the object type variable is not changed. Therefore, it is better to use 'const' for object type variable declaration. If you need to explicitly change the address value(reallocated) of an object type variable, use 'let'.

@@ -169,6 +169,7 @@
     "workbench.colorTheme": "Dracula",
     "editor.renderIndentGuides": false,
     "workbench.iconTheme": "vscode-icons",
-    "eslint.validate": ["javascript", "html"]
+    "eslint.validate": ["javascript", "html"],
+    "eslint.autoFixOnSave": true
 }
 ```
