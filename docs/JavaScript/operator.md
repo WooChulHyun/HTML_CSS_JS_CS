@@ -186,3 +186,18 @@ NaN === NaN; // false
 | &&       | Logical AND | a && b   | true if both a and b are true, false otherwise |
 |          | Logical OR  | a \|\| b | true if either a or b is true, false otherwise |
 | !        | Logical NOT | !a       | false if a is true, true if a is false         |
+
+```javascript
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+console.log(!true); // false
+console.log(!false); // true
+```
