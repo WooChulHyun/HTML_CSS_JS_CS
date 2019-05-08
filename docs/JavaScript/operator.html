@@ -859,7 +859,7 @@ y = x--;
 y = --x;
 <span class="hljs-built_in">console</span>.log(y, x); <span class="hljs-comment">// 3 3</span>
 </code></pre>
-<h4 id="assignment-operator">Assignment Operator</h4>
+<h3 id="assignment-operator">Assignment Operator</h3>
 <hr>
 
 <table>
@@ -918,7 +918,7 @@ x /= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x / 5
 x %= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x % 5;</span>
 <span class="hljs-built_in">console</span>.log(x); <span class="hljs-comment">// 0</span>
 </code></pre>
-<h4 id="comparison-operator">Comparison Operator</h4>
+<h3 id="comparison-operator">Comparison Operator</h3>
 <hr>
 
 <table>
@@ -1001,7 +1001,7 @@ x %= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x % 5
 <span class="hljs-literal">true</span> === <span class="hljs-string">&quot;1&quot;</span>; <span class="hljs-comment">// false</span>
 <span class="hljs-literal">NaN</span> === <span class="hljs-literal">NaN</span>; <span class="hljs-comment">// false</span>
 </code></pre>
-<h4 id="logical-operator">Logical Operator</h4>
+<h3 id="logical-operator">Logical Operator</h3>
 <hr>
 
 <table>
@@ -1047,6 +1047,111 @@ x %= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x % 5
 <span class="hljs-built_in">console</span>.log(!<span class="hljs-literal">true</span>); <span class="hljs-comment">// false</span>
 <span class="hljs-built_in">console</span>.log(!<span class="hljs-literal">false</span>); <span class="hljs-comment">// true</span>
 </code></pre>
+<h3 id="other-operators">Other Operators</h3>
+<hr>
+
+<table>
+<thead>
+<tr>
+<th>Operator</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>typeof</td>
+<td>Check the data type</td>
+</tr>
+<tr>
+<td>?:</td>
+<td>Conditional operator (ternary operator)</td>
+</tr>
+<tr>
+<td>void</td>
+<td>Returns an undefined value</td>
+</tr>
+<tr>
+<td>,</td>
+<td>Operate consecutive operands in left-to-right order</td>
+</tr>
+<tr>
+<td>delete</td>
+<td>Remove an object&apos;s properties or array elements</td>
+</tr>
+<tr>
+<td>new</td>
+<td>Create a new object</td>
+</tr>
+<tr>
+<td>in</td>
+<td>Check whether object contains property</td>
+</tr>
+<tr>
+<td>instanceof</td>
+<td>Check the type of object</td>
+</tr>
+<tr>
+<td>eval()</td>
+<td>Evaluates JavaScript code represented as a string</td>
+</tr>
+</tbody>
+</table>
+<p>Actually, eval() is function.</p>
+<h4 id="typeof-operator">typeof Operator</h4>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">typeof</span> <span class="hljs-string">&quot;&quot;</span>; <span class="hljs-comment">// &quot;string&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-number">1</span>; <span class="hljs-comment">// &quot;number&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-literal">NaN</span>; <span class="hljs-comment">// &quot;number&quot; &lt;-- do not use(bug), use (===)</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-literal">true</span>; <span class="hljs-comment">// &quot;boolean&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-literal">undefined</span>; <span class="hljs-comment">// &quot;undefined&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-built_in">Symbol</span>(); <span class="hljs-comment">// &quot;symbol&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-literal">null</span>; <span class="hljs-comment">// &quot;object&quot;</span>
+<span class="hljs-keyword">typeof</span> []; <span class="hljs-comment">// &quot;object&quot;</span>
+<span class="hljs-keyword">typeof</span> {}; <span class="hljs-comment">// &quot;object&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Date</span>(); <span class="hljs-comment">// &quot;object&quot;</span>
+<span class="hljs-keyword">typeof</span> /test/gi; <span class="hljs-comment">// &quot;object&quot;</span>
+<span class="hljs-keyword">typeof</span> <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{}; <span class="hljs-comment">// &quot;function&quot;</span>
+</code></pre>
+<h4 id="ternary-operator">ternary Operator</h4>
+<hr>
+
+<p>(Conditional expression) <code>?</code> value to return when the conditional expression is true <code>:</code> alue to return when the conditional expression is false</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> number = a % <span class="hljs-number">2</span> === <span class="hljs-number">0</span> ? <span class="hljs-string">&quot;even&quot;</span> : <span class="hljs-string">&quot;odd&quot;</span>;
+
+<span class="hljs-comment">// same</span>
+
+<span class="hljs-keyword">if</span> (a % <span class="hljs-number">2</span> === <span class="hljs-number">0</span>) {
+    number = <span class="hljs-string">&quot;even&quot;</span>;
+} <span class="hljs-keyword">else</span> {
+    number = <span class="hljs-string">&quot;odd&quot;</span>;
+}
+</code></pre>
+<pre><code class="lang-javascript">n === <span class="hljs-literal">undefined</span> ? array[array.length - <span class="hljs-number">1</span>] : n === <span class="hljs-number">0</span> ? [] : array.slice(-n);
+
+<span class="hljs-comment">// same</span>
+
+<span class="hljs-keyword">if</span> (n === <span class="hljs-literal">undefined</span>) {
+    <span class="hljs-keyword">return</span> array[array.length - <span class="hljs-number">1</span>];
+}
+<span class="hljs-keyword">if</span> (n === <span class="hljs-number">0</span>) {
+    <span class="hljs-keyword">return</span> [];
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">return</span> array.slice(-n);
+}
+</code></pre>
+<h4 id="comma-operator">Comma operator</h4>
+<hr>
+
+<p>The comma (,) operator evaluates the operands in sequence starting with the left operand and returns the result of the evaluation of the last operand after evaluation of the last operand.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">let</span> x, y, z;
+(x = <span class="hljs-number">1</span>), (y = <span class="hljs-number">2</span>), (z = <span class="hljs-number">3</span>); <span class="hljs-comment">// 3</span>
+</code></pre>
+<p>You can put only three statements in the brackets of the for statement, but in this example, using the comma operator to execute more statements.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">1</span>, sum = <span class="hljs-number">0</span>; i &lt;= <span class="hljs-number">10</span>; i++) {
+    sum += i;
+}
+</code></pre>
 
                                 
                                 </section>
@@ -1090,7 +1195,7 @@ x %= <span class="hljs-number">5</span>; <span class="hljs-comment">// x = x % 5
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Operator","level":"1.4.5","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Data type","level":"1.4.4","depth":2,"path":"docs/JavaScript/data_type.md","ref":"docs/JavaScript/data_type.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/operator.md","mtime":"2019-05-08T02:05:01.331Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T02:05:05.758Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Operator","level":"1.4.5","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Data type","level":"1.4.4","depth":2,"path":"docs/JavaScript/data_type.md","ref":"docs/JavaScript/data_type.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/operator.md","mtime":"2019-05-08T10:53:07.743Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-08T10:53:13.289Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
