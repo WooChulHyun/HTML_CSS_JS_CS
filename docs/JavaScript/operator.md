@@ -181,11 +181,11 @@ NaN === NaN; // false
 
 <hr>
 
-| Operator | Meaning     | Example  | Description                                    |
-| -------- | ----------- | -------- | ---------------------------------------------- |
-| &&       | Logical AND | a && b   | true if both a and b are true, false otherwise |
-|          | Logical OR  | a \|\| b | true if either a or b is true, false otherwise |
-| !        | Logical NOT | !a       | false if a is true, true if a is false         |
+| Operator | Meaning     | Example | Description                                    |
+| -------- | ----------- | ------- | ---------------------------------------------- |
+| &&       | Logical AND | a && b  | true if both a and b are true, false otherwise |
+|          | Logical OR  | a II b  | true if either a or b is true, false otherwise |
+| !        | Logical NOT | !a      | false if a is true, true if a is false         |
 
 ```javascript
 console.log(true && true); // true

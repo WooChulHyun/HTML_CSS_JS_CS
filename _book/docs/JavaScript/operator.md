@@ -150,3 +150,54 @@ console.log(x); // 0
 | <        | Less than             | a < b   | true if b value is greater than a, false otherwise               |
 | >=       | Greater than or equal | a >= b  | true if a value is greater than or equal b, false otherwise      |
 | <=       | Less than or equal    | a <= b  | true if b value is greater than or equal a, false otherwise      |
+
+```javascript
+let a = [1, 2, 3];
+let b = [1, 2, 3];
+let c = a;
+
+console.log(a == b); // false
+console.log(a == c); // true
+```
+
+```javascript
+null == undefined; // true
+1 == "1"; // true
+"oxff" == 255; // true
+true == 1; // true
+true == "1"; // true
+```
+
+```javascript
+null === undefined; // false
+1 === "1"; // false
+"oxff" === 255; // false
+true === 1; // false
+true === "1"; // false
+NaN === NaN; // false
+```
+
+#### Logical Operator
+
+<hr>
+
+| Operator | Meaning     | Example | Description                                    |
+| -------- | ----------- | ------- | ---------------------------------------------- |
+| &&       | Logical AND | a && b  | true if both a and b are true, false otherwise |
+|          | Logical OR  | a II b  | true if either a or b is true, false otherwise |
+| !        | Logical NOT | !a      | false if a is true, true if a is false         |
+
+```javascript
+console.log(true && true); // true
+console.log(true && false); // false
+console.log(false && true); // false
+console.log(false && false); // false
+
+console.log(true || true); // true
+console.log(true || false); // true
+console.log(false || true); // true
+console.log(false || false); // false
+
+console.log(!true); // false
+console.log(!false); // true
+```
