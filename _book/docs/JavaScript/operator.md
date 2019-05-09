@@ -184,7 +184,7 @@ NaN === NaN; // false
 | Operator | Meaning     | Example | Description                                    |
 | -------- | ----------- | ------- | ---------------------------------------------- |
 | &&       | Logical AND | a && b  | true if both a and b are true, false otherwise |
-|          | Logical OR  | a II b  | true if either a or b is true, false otherwise |
+| II       | Logical OR  | a II b  | true if either a or b is true, false otherwise |
 | !        | Logical NOT | !a      | false if a is true, true if a is false         |
 
 ```javascript
@@ -200,6 +200,26 @@ console.log(false || false); // false
 
 console.log(!true); // false
 console.log(!false); // true
+```
+
+The operation result of the logical OR (||) operator and logical AND (&&) operator may not be a Boolean value. These two operators always return one of the operands.
+
+```javascript
+true && anything; // anything
+false && anything; // false
+
+true || anything; // true
+false || anything; // anything
+```
+
+```javascript
+"Cat" && "Dog"; // Dog
+false && "Dog"; // false
+"Cat" && false; // false
+
+"Cat" || "Dog"; // 'Cat'
+false || "Dog"; // 'Dog'
+"Cat" || false; // 'Cat'
 ```
 
 ### Other Operators
