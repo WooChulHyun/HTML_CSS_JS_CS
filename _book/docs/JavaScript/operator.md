@@ -102,7 +102,7 @@ y = --x;
 console.log(y, x); // 3 3
 ```
 
-#### Assignment Operator
+### Assignment Operator
 
 <hr>
 
@@ -136,7 +136,7 @@ x %= 5; // x = x % 5;
 console.log(x); // 0
 ```
 
-#### Comparison Operator
+### Comparison Operator
 
 <hr>
 
@@ -177,7 +177,7 @@ true === "1"; // false
 NaN === NaN; // false
 ```
 
-#### Logical Operator
+### Logical Operator
 
 <hr>
 
@@ -200,4 +200,93 @@ console.log(false || false); // false
 
 console.log(!true); // false
 console.log(!false); // true
+```
+
+### Other Operators
+
+<hr>
+
+| Operator   | Meaning                                             |
+| ---------- | --------------------------------------------------- |
+| typeof     | Check the data type                                 |
+| ?:         | Conditional operator (ternary operator)             |
+| void       | Returns an undefined value                          |
+| ,          | Operate consecutive operands in left-to-right order |
+| delete     | Remove an object's properties or array elements     |
+| new        | Create a new object                                 |
+| in         | Check whether object contains property              |
+| instanceof | Check the type of object                            |
+| eval()     | Evaluates JavaScript code represented as a string   |
+
+Actually, eval() is function.
+
+#### typeof Operator
+
+<hr>
+
+```javascript
+typeof ""; // "string"
+typeof 1; // "number"
+typeof NaN; // "number" <-- do not use(bug), use (===)
+typeof true; // "boolean"
+typeof undefined; // "undefined"
+typeof Symbol(); // "symbol"
+typeof null; // "object"
+typeof []; // "object"
+typeof {}; // "object"
+typeof new Date(); // "object"
+typeof /test/gi; // "object"
+typeof function() {}; // "function"
+```
+
+#### ternary Operator
+
+<hr>
+
+(Conditional expression) `?` value to return when the conditional expression is true `:` alue to return when the conditional expression is false
+
+```javascript
+let number = a % 2 === 0 ? "even" : "odd";
+
+// same
+
+if (a % 2 === 0) {
+    number = "even";
+} else {
+    number = "odd";
+}
+```
+
+```javascript
+n === undefined ? array[array.length - 1] : n === 0 ? [] : array.slice(-n);
+
+// same
+
+if (n === undefined) {
+    return array[array.length - 1];
+}
+if (n === 0) {
+    return [];
+} else {
+    return array.slice(-n);
+}
+```
+
+#### Comma operator
+
+<hr>
+
+The comma (,) operator evaluates the operands in sequence starting with the left operand and returns the result of the evaluation of the last operand after evaluation of the last operand.
+
+```javascript
+let x, y, z;
+(x = 1), (y = 2), (z = 3); // 3
+```
+
+You can put only three statements in the brackets of the for statement, but in this example, using the comma operator to execute more statements.
+
+```javascript
+for (let i = 1, sum = 0; i <= 10; i++) {
+    sum += i;
+}
 ```
