@@ -364,14 +364,15 @@ console.log(window.x); // undefined
 'let' is free to reassign, but 'const' is not re-assignable.
 
 ```javascript
-const x = 123;
-x = 456; // TypeError: Assignment to constant variable.
+// Declares variable names as uppercase to indicate that they are constants.
+const X = 123;
+X = 456; // TypeError: Assignment to constant variable.
 ```
 
 'const' must be assigned at the same time as declaration. Otherwise, SyntaxError occurs.
 
 ```javascript
-const x; // SyntaxError: Missing initializer in const declaration
+const X; // SyntaxError: Missing initializer in const declaration
 ```
 
 #### const and objects
@@ -381,17 +382,17 @@ const x; // SyntaxError: Missing initializer in const declaration
 'const' is not able to be reassigned. This means that if the type of the 'const' variable is an object, it can not change the reference to the object. However, the properties of the object are not protected. In other words, it is impossible to reassign, but you can change the contents of the assigned object (adding, removing, changing property values).
 
 ```javascript
-const animal = { animal1: "lion" };
-const alphabet = ["a"];
+const ANIMAL = { animal1: "lion" };
+const ALPHABET = ["a"];
 
 // animal = {}; // TypeError: Assignment to constant variable.
 
-animal.animal1 = "tiger";
-animal.animal2 = "turtle";
-alphabet.push("b");
+ANIMAL.animal1 = "tiger";
+ANIMAL.animal2 = "turtle";
+ALPHABET.push("b");
 
-console.log(animal); // {animal1: "tiger", animal2: "turtle"}
-console.log(alphabet); // ["a", "b"]
+console.log(ANIMAL); // {animal1: "tiger", animal2: "turtle"}
+console.log(ALPHABET); // ["a", "b"]
 ```
 
 Even if the contents of the object are changed, the address value allocated to the object type variable is not changed. Therefore, it is better to use 'const' for object type variable declaration. If you need to explicitly change the address value(reallocated) of an object type variable, use 'let'.
