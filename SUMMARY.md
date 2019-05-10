@@ -38,7 +38,7 @@
     -   [let, const](docs/JavaScript/let_const.md)
     -   [Data type](docs/JavaScript/data_type.md)
     -   [Operator](docs/JavaScript/operator.md)
-    -   [Control statement](docs/JavaScript/control_flow_statement.md)
+    -   [Control statement](docs/JavaScript/control_statement.md)
     -   [Type Conversion](docs/JavaScript/type_conversion.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)

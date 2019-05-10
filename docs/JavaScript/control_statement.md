@@ -1,12 +1,12 @@
-# Control flow statement
+# Control statement
 
-### Control flow statement
+### Control statement
 
 <hr>
 
 Typically, the code is executed sequentially from top to bottom. Control statements can be used to artificially control the execution flow of code.
 
-| Classification        | Control flow statement               |
+| Classification        | Control statement                    |
 | --------------------- | ------------------------------------ |
 | Conditional statement | if/else, switch, try/catch/finally   |
 | Loop Statement        | while, do/while, for, for/in, for/of |
@@ -305,11 +305,11 @@ for (let i = 0; i < 10; ) {
 <hr>
 
 ```javascript
-const n = 20;
+const N = 20;
 
-for (let a = 1; a <= n; a++) {
-    for (let b = 1; b <= n; b++) {
-        for (let c = 1; c <= n; c++) {
+for (let a = 1; a <= N; a++) {
+    for (let b = 1; b <= N; b++) {
+        for (let c = 1; c <= N; c++) {
             if (a * a + b * b === c * c) {
                 console.log(`${a}^2 +${b}^2 = ${c}^2`);
             }
@@ -336,9 +336,9 @@ for (let a = 1; a <= n; a++) {
 <hr>
 
 ```javascript
-const alphabet = ["a", "b", "c", "d"];
+const ALPHABET = ["a", "b", "c", "d"];
 
-for (const key in alphabet) {
+for (const key in ALPHABET) {
     console.log(key);
 }
 
@@ -349,10 +349,10 @@ for (const key in alphabet) {
 ```
 
 ```javascript
-const alphabet = ["a", "b", "c", "d"];
+const ALPHABET = ["a", "b", "c", "d"];
 
-for (const key in alphabet) {
-    console.log(alphabet[key]);
+for (const key in ALPHABET) {
+    console.log(ALPHABET[key]);
 }
 
 // a
@@ -362,12 +362,12 @@ for (const key in alphabet) {
 ```
 
 ```javascript
-const userInfo = {
+const USER_INFO = {
     name: "hi",
     age: 20
 };
 
-for (const key in userInfo) {
+for (const key in USER_INFO) {
     console.log(key);
 }
 
@@ -376,12 +376,12 @@ for (const key in userInfo) {
 ```
 
 ```javascript
-const userInfo = {
+const USER_INFO = {
     name: "hi",
     age: 20
 };
 
-for (const key in userInfo) {
+for (const key in USER_INFO) {
     console.log(userInfo[key]);
 }
 
@@ -416,13 +416,13 @@ foo: {
 The labeled break statement is used to exit the entire loop, usually within the inner loop of the nested loop.
 
 ```javascript
-const a = [1, 2, 3, 4, 5];
-const b = [8, 9, 7, 3, 5];
+const A = [1, 2, 3, 4, 5];
+const B = [8, 9, 7, 3, 5];
 
-for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < b.length; j++) {
-        if (a[i] === b[j]) {
-            console.log(`${a[i]} ${b[j]}`);
+for (let i = 0; i < A.length; i++) {
+    for (let j = 0; j < B.length; j++) {
+        if (A[i] === B[j]) {
+            console.log(`${A[i]} ${B[j]}`);
         }
     }
 }
@@ -432,13 +432,13 @@ for (let i = 0; i < a.length; i++) {
 ```
 
 ```javascript
-const a = [1, 2, 3, 4, 5];
-const b = [8, 9, 7, 3, 5];
+const A = [1, 2, 3, 4, 5];
+const B = [8, 9, 7, 3, 5];
 
-loop: for (let i = 0; i < a.length; i++) {
-    for (let j = 0; j < b.length; j++) {
-        if (a[i] === b[j]) {
-            console.log(`${a[i]} ${b[j]}`);
+loop: for (let i = 0; i < A.length; i++) {
+    for (let j = 0; j < B.length; j++) {
+        if (A[i] === B[j]) {
+            console.log(`${A[i]} ${B[j]}`);
             break loop;
         }
     }
@@ -480,11 +480,11 @@ while (i < 5) {
 ```
 
 ```javascript
-const a = [1, -2, 3, -4, 5];
+const A = [1, -2, 3, -4, 5];
 
-for (let i = 0, sum = 0; i < a.length; i++) {
-    if (a[i] < 0) continue;
-    sum += a[i];
+for (let i = 0, sum = 0; i < A.length; i++) {
+    if (A[i] < 0) continue;
+    sum += A[i];
     console.log(sum);
 }
 
