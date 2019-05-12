@@ -9,8 +9,8 @@ Typically, the code is executed sequentially from top to bottom. Control stateme
 | Classification        | Control statement                    |
 | --------------------- | ------------------------------------ |
 | Conditional statement | if/else, switch, try/catch/finally   |
-| Loop Statement        | while, do/while, for, for/in, for/of |
-|                       | break, continue, return, throw       |
+| Loop statement        | while, do/while, for, for/in, for/of |
+| Jump statement        | break, continue, return, throw       |
 
 ### Conditional statement
 
@@ -389,7 +389,9 @@ for (const key in USER_INFO) {
 // 20
 ```
 
-### label
+### Jump Statement
+
+#### label
 
 <hr>
 
@@ -409,7 +411,7 @@ foo: {
 // 1
 ```
 
-### break
+#### break
 
 <hr>
 
@@ -447,7 +449,7 @@ loop: for (let i = 0; i < A.length; i++) {
 // 3 3
 ```
 
-### continue
+#### continue
 
 <hr>
 
