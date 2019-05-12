@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>JavaScript · Web Development Book</title>
+        <title>Object literal · Web Development Book</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -49,10 +49,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="variable.html" />
+    <link rel="next" href="../Computer_Science/" />
     
     
-    <link rel="prev" href="../CSS/block_inline.html" />
+    <link rel="prev" href="type_conversion.html" />
     
 
     </head>
@@ -440,7 +440,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4" data-path="./">
+        <li class="chapter " data-level="1.4" data-path="./">
             
                 <a href="./">
             
@@ -545,7 +545,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.8" data-path="object_literal.html">
+        <li class="chapter active" data-level="1.4.8" data-path="object_literal.html">
             
                 <a href="object_literal.html">
             
@@ -734,7 +734,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >JavaScript</a>
+        <a href="../.." >Object literal</a>
     </h1>
 </div>
 
@@ -749,10 +749,74 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="index-js">index JS</h1>
-<blockquote>
-<p>The string type examples used here wrapped with double quotes (&quot; &quot;) due to an extension conflict, but it is generally recommended to use single quotes (&apos; &apos;).</p>
-</blockquote>
+                                <h1 id="object-literal">Object Literal</h1>
+<h3 id="object">Object</h3>
+<hr>
+
+<p>In JavaScript, all values except primitive types are objects.</p>
+<p>A primitive type represents only one value, but an object / reference type is a complex data structure that consists of several types of values (primitive type values or other objects) as a unit. The value of the primitive type is an immutable value, but the value of the object type is a mutable value.</p>
+<p>An object is a set of properties consisting of a key and a value. You can use any value that is available in JavaScript as the value of the property. Function in JavaScript is first-class objects, so they can be treated as values. Therefore, you can use a function as a property value. If the property value is a function, it is called a method to distinguish it from a normal function.</p>
+<h3 id="way-to-create-an-object">Way to create an object</h3>
+<hr>
+
+<ul>
+<li><p>Object literal</p>
+</li>
+<li><p>Object constructor function</p>
+</li>
+<li><p>Constructor function</p>
+</li>
+<li><p>Object.create method</p>
+</li>
+<li><p>Class (ES6)</p>
+<ul>
+<li><p>Class-based object-oriented languages such as C ++ and Java create objects by defining classes in advance and creating instances by calling the constructor with the new operator at the required time.</p>
+</li>
+<li><p>Instance</p>
+<ul>
+<li>An instance is an substance created by a class and stored in memory. In object-oriented programming, objects are concepts that include classes and instances. The class function as a template for creating instances. An instance is a term that focuses on the fact that an object is actually stored in memory.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="create-an-object-whit-object-literal">Create an object whit object literal</h4>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> person = { name: <span class="hljs-string">&quot;Hyun&quot;</span>, gender: <span class="hljs-string">&quot;male&quot;</span> };
+</code></pre>
+<p>Here, <code>{ name: &quot;Hyun&quot;, gender: &quot;male&quot; }</code> is an object literal, and the object literal is assigned to the variable person.</p>
+<p><code>name: &quot;Hyun&quot;</code> and <code>gender: &quot;male&quot;</code> are properties of object, <code>name</code> and <code>gender</code> are property keys ,and <code>Hyun</code> and <code>male</code> are property values.</p>
+<hr>
+
+<p>Quotation marks must be used for names that do not follow the identifier naming convention.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> person = {
+    last_name: <span class="hljs-string">&quot;Hyun&quot;</span>,
+    <span class="hljs-string">&quot;first-name&quot;</span>: <span class="hljs-string">&quot;Woochul&quot;</span>, <span class="hljs-comment">// &lt;-- Quotation marks</span>
+    gender: <span class="hljs-string">&quot;male&quot;</span>
+};
+</code></pre>
+<hr>
+
+<p>If you use a value other than a string or symbol value in a property key, it becomes a string through implicit type conversion.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> foo = {
+    <span class="hljs-number">0</span>: <span class="hljs-number">3</span>,
+    <span class="hljs-number">1</span>: <span class="hljs-number">4</span>,
+    <span class="hljs-number">2</span>: <span class="hljs-number">5</span>
+};
+
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> foo) {
+    <span class="hljs-built_in">console</span>.log(key);
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-keyword">typeof</span> key);
+}
+
+<span class="hljs-comment">// 0</span>
+<span class="hljs-comment">// string</span>
+<span class="hljs-comment">// 1</span>
+<span class="hljs-comment">// string</span>
+<span class="hljs-comment">// 2</span>
+<span class="hljs-comment">// string</span>
+</code></pre>
 
                                 
                                 </section>
@@ -780,12 +844,12 @@
 
             
                 
-                <a href="../CSS/block_inline.html" class="navigation navigation-prev " aria-label="Previous page: Block / Inline">
+                <a href="type_conversion.html" class="navigation navigation-prev " aria-label="Previous page: Type Conversion">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="variable.html" class="navigation navigation-next " aria-label="Next page: Variable">
+                <a href="../Computer_Science/" class="navigation navigation-next " aria-label="Next page: Computer Science">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -796,7 +860,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"JavaScript","level":"1.4","depth":1,"next":{"title":"Variable","level":"1.4.1","depth":2,"path":"docs/JavaScript/variable.md","ref":"docs/JavaScript/variable.md","articles":[]},"previous":{"title":"Block / Inline","level":"1.3.6","depth":2,"path":"docs/CSS/block_inline.md","ref":"docs/CSS/block_inline.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/index.md","mtime":"2019-05-12T03:55:51.867Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-12T06:32:26.305Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Object literal","level":"1.4.8","depth":2,"next":{"title":"Computer Science","level":"1.5","depth":1,"path":"docs/Computer_Science/index.md","ref":"docs/Computer_Science/index.md","articles":[{"title":"test","level":"1.5.1","depth":2,"path":"docs/Computer_Science/test.md","ref":"docs/Computer_Science/test.md","articles":[]}]},"previous":{"title":"Type Conversion","level":"1.4.7","depth":2,"path":"docs/JavaScript/type_conversion.md","ref":"docs/JavaScript/type_conversion.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/object_literal.md","mtime":"2019-05-12T06:20:07.216Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-12T06:32:26.305Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

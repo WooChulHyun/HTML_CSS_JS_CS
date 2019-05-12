@@ -40,6 +40,7 @@
     -   [Operator](docs/JavaScript/operator.md)
     -   [Control statement](docs/JavaScript/control_statement.md)
     -   [Type Conversion](docs/JavaScript/type_conversion.md)
+    -   [Object literal](docs/JavaScript/object_literal.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)
 

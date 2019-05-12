@@ -519,9 +519,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.6" data-path="control_flow_statement.html">
+        <li class="chapter active" data-level="1.4.6" data-path="control_statement.html">
             
-                <a href="control_flow_statement.html">
+                <a href="control_statement.html">
             
                     
                     Control statement
@@ -538,6 +538,19 @@
             
                     
                     Type Conversion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="object_literal.html">
+            
+                <a href="object_literal.html">
+            
+                    
+                    Object literal
             
                 </a>
             
@@ -736,8 +749,8 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="control-flow-statement">Control flow statement</h1>
-<h3 id="control-flow-statement">Control flow statement</h3>
+                                <h1 id="control-statement">Control statement</h1>
+<h3 id="control-statement">Control statement</h3>
 <hr>
 
 <p>Typically, the code is executed sequentially from top to bottom. Control statements can be used to artificially control the execution flow of code.</p>
@@ -745,7 +758,7 @@
 <thead>
 <tr>
 <th>Classification</th>
-<th>Control flow statement</th>
+<th>Control statement</th>
 </tr>
 </thead>
 <tbody>
@@ -754,11 +767,11 @@
 <td>if/else, switch, try/catch/finally</td>
 </tr>
 <tr>
-<td>Loop Statement</td>
+<td>Loop statement</td>
 <td>while, do/while, for, for/in, for/of</td>
 </tr>
 <tr>
-<td></td>
+<td>Jump statement</td>
 <td>break, continue, return, throw</td>
 </tr>
 </tbody>
@@ -1003,11 +1016,11 @@
 <h4 id="nested-loop">Nested loop</h4>
 <hr>
 
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> n = <span class="hljs-number">20</span>;
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> N = <span class="hljs-number">20</span>;
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>; a &lt;= n; a++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> b = <span class="hljs-number">1</span>; b &lt;= n; b++) {
-        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> c = <span class="hljs-number">1</span>; c &lt;= n; c++) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> a = <span class="hljs-number">1</span>; a &lt;= N; a++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> b = <span class="hljs-number">1</span>; b &lt;= N; b++) {
+        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> c = <span class="hljs-number">1</span>; c &lt;= N; c++) {
             <span class="hljs-keyword">if</span> (a * a + b * b === c * c) {
                 <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${a}</span>^2 +<span class="hljs-subst">${b}</span>^2 = <span class="hljs-subst">${c}</span>^2`</span>);
             }
@@ -1031,9 +1044,9 @@
 <h4 id="forin">for/in</h4>
 <hr>
 
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> alphabet = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ALPHABET = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>];
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> alphabet) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> ALPHABET) {
     <span class="hljs-built_in">console</span>.log(key);
 }
 
@@ -1042,10 +1055,10 @@
 <span class="hljs-comment">// 2 --&gt; index</span>
 <span class="hljs-comment">// 3 --&gt; index</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> alphabet = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ALPHABET = [<span class="hljs-string">&quot;a&quot;</span>, <span class="hljs-string">&quot;b&quot;</span>, <span class="hljs-string">&quot;c&quot;</span>, <span class="hljs-string">&quot;d&quot;</span>];
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> alphabet) {
-    <span class="hljs-built_in">console</span>.log(alphabet[key]);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> ALPHABET) {
+    <span class="hljs-built_in">console</span>.log(ALPHABET[key]);
 }
 
 <span class="hljs-comment">// a</span>
@@ -1053,31 +1066,32 @@
 <span class="hljs-comment">// c</span>
 <span class="hljs-comment">// d</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> userInfo = {
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> USER_INFO = {
     name: <span class="hljs-string">&quot;hi&quot;</span>,
     age: <span class="hljs-number">20</span>
 };
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> userInfo) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> USER_INFO) {
     <span class="hljs-built_in">console</span>.log(key);
 }
 
 <span class="hljs-comment">// name</span>
 <span class="hljs-comment">// age</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> userInfo = {
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> USER_INFO = {
     name: <span class="hljs-string">&quot;hi&quot;</span>,
     age: <span class="hljs-number">20</span>
 };
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> userInfo) {
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">const</span> key <span class="hljs-keyword">in</span> USER_INFO) {
     <span class="hljs-built_in">console</span>.log(userInfo[key]);
 }
 
 <span class="hljs-comment">// hi</span>
 <span class="hljs-comment">// 20</span>
 </code></pre>
-<h3 id="label">label</h3>
+<h3 id="jump-statement">Jump Statement</h3>
+<h4 id="label">label</h4>
 <hr>
 
 <p>Usage:</p>
@@ -1093,17 +1107,17 @@
 
 <span class="hljs-comment">// 1</span>
 </code></pre>
-<h3 id="break">break</h3>
+<h4 id="break">break</h4>
 <hr>
 
 <p>The labeled break statement is used to exit the entire loop, usually within the inner loop of the nested loop.</p>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-<span class="hljs-keyword">const</span> b = [<span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> A = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">const</span> B = [<span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; a.length; i++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; b.length; j++) {
-        <span class="hljs-keyword">if</span> (a[i] === b[j]) {
-            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${a[i]}</span> <span class="hljs-subst">${b[j]}</span>`</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; A.length; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; B.length; j++) {
+        <span class="hljs-keyword">if</span> (A[i] === B[j]) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${A[i]}</span> <span class="hljs-subst">${B[j]}</span>`</span>);
         }
     }
 }
@@ -1111,13 +1125,13 @@
 <span class="hljs-comment">// 3 3</span>
 <span class="hljs-comment">// 5 5</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
-<span class="hljs-keyword">const</span> b = [<span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> A = [<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">4</span>, <span class="hljs-number">5</span>];
+<span class="hljs-keyword">const</span> B = [<span class="hljs-number">8</span>, <span class="hljs-number">9</span>, <span class="hljs-number">7</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>];
 
-loop: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; a.length; i++) {
-    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; b.length; j++) {
-        <span class="hljs-keyword">if</span> (a[i] === b[j]) {
-            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${a[i]}</span> <span class="hljs-subst">${b[j]}</span>`</span>);
+loop: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>; i &lt; A.length; i++) {
+    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> j = <span class="hljs-number">0</span>; j &lt; B.length; j++) {
+        <span class="hljs-keyword">if</span> (A[i] === B[j]) {
+            <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`<span class="hljs-subst">${A[i]}</span> <span class="hljs-subst">${B[j]}</span>`</span>);
             <span class="hljs-keyword">break</span> loop;
         }
     }
@@ -1125,7 +1139,7 @@ loop: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</spa
 
 <span class="hljs-comment">// 3 3</span>
 </code></pre>
-<h3 id="continue">continue</h3>
+<h4 id="continue">continue</h4>
 <hr>
 
 <table>
@@ -1173,11 +1187,11 @@ loop: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</spa
 <span class="hljs-comment">// 7</span>
 <span class="hljs-comment">// 12</span>
 </code></pre>
-<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> a = [<span class="hljs-number">1</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">5</span>];
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> A = [<span class="hljs-number">1</span>, <span class="hljs-number">-2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">-4</span>, <span class="hljs-number">5</span>];
 
-<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, sum = <span class="hljs-number">0</span>; i &lt; a.length; i++) {
-    <span class="hljs-keyword">if</span> (a[i] &lt; <span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>;
-    sum += a[i];
+<span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</span> i = <span class="hljs-number">0</span>, sum = <span class="hljs-number">0</span>; i &lt; A.length; i++) {
+    <span class="hljs-keyword">if</span> (A[i] &lt; <span class="hljs-number">0</span>) <span class="hljs-keyword">continue</span>;
+    sum += A[i];
     <span class="hljs-built_in">console</span>.log(sum);
 }
 
@@ -1228,7 +1242,7 @@ loop: <span class="hljs-keyword">for</span> (<span class="hljs-keyword">let</spa
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Control statement","level":"1.4.6","depth":2,"next":{"title":"Type Conversion","level":"1.4.7","depth":2,"path":"docs/JavaScript/type_conversion.md","ref":"docs/JavaScript/type_conversion.md","articles":[]},"previous":{"title":"Operator","level":"1.4.5","depth":2,"path":"docs/JavaScript/operator.md","ref":"docs/JavaScript/operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/control_flow_statement.md","mtime":"2019-05-09T06:56:36.261Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-09T11:50:44.179Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Control statement","level":"1.4.6","depth":2,"next":{"title":"Type Conversion","level":"1.4.7","depth":2,"path":"docs/JavaScript/type_conversion.md","ref":"docs/JavaScript/type_conversion.md","articles":[]},"previous":{"title":"Operator","level":"1.4.5","depth":2,"path":"docs/JavaScript/operator.md","ref":"docs/JavaScript/operator.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/control_statement.md","mtime":"2019-05-12T03:55:51.878Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-12T06:32:26.305Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
