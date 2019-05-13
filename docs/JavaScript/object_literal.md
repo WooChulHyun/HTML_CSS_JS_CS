@@ -35,7 +35,7 @@ An object is a set of properties consisting of a key and a value. You can use an
 <hr>
 
 ```javascript
-const person = { name: "Hyun", gender: "male" };
+const PERSON = { name: "Hyun", gender: "male" };
 ```
 
 Here, `{ name: "Hyun", gender: "male" }` is an object literal, and the object literal is assigned to the variable person.
@@ -47,7 +47,7 @@ Here, `{ name: "Hyun", gender: "male" }` is an object literal, and the object li
 Quotation marks must be used for names that do not follow the identifier naming convention.
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     "first-name": "Woochul", // <-- Quotation marks
     gender: "male"
@@ -59,14 +59,14 @@ const person = {
 If you use a value other than a string or symbol value in a property key, it becomes a string through implicit type conversion.
 
 ```javascript
-const foo = {
+const FOO = {
     0: 3,
     1: 4,
     2: 5
 };
 
-for (const key in foo) {
-    console.log(key, typeof key);
+for (const KEY in FOO) {
+    console.log(KEY, typeof KEY);
 }
 
 // 0 string
@@ -83,7 +83,7 @@ All the values available in JavaScript can be used as property values. A functio
 If the property value is a function, it is called a method to distinguish it from a normal function. In other words, a method means a function restricted in an object.
 
 ```javascript
-const circle = {
+const CIRCLE = {
     center: { x: 3.0, y: 4.0 },
     radius: 5.0,
     area: function() {
@@ -91,7 +91,7 @@ const circle = {
     }
 };
 
-console.log(circle.area()); // 78.53981633974483
+console.log(CIRCLE.area()); // 78.53981633974483
 ```
 
 ### Way to access a property
@@ -101,15 +101,15 @@ console.log(circle.area()); // 78.53981633974483
 To access property values, use dot notation which uses (.) operator, or the bracket notation which uses bracket ([...]) operator.
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     first_name: "Woochul",
     gender: "male"
 };
 
-console.log(person.last_name); // Hyun
-console.log(person["first_name"]); // Woochul
-console.log(person.age); // undefined
+console.log(PERSON.last_name); // Hyun
+console.log(PERSON["first_name"]); // Woochul
+console.log(PERSON.age); // undefined
 ```
 
 ### Add property
@@ -117,28 +117,28 @@ console.log(person.age); // undefined
 <hr>
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     first_name: "Woochul",
     gender: "male"
 };
 
-person.age = 1;
+PERSON.age = 1;
 
-console.log(person);
+console.log(PERSON);
 // {last_name: "Hyun", first_name: "Woochul", gender: "male", age: 1}
 ```
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     first_name: "Woochul",
     gender: "male"
 };
 
-person.age = 5;
+PERSON.age = 5;
 
-console.log(person);
+console.log(PERSON);
 // {last_name: "Hyun", first_name: "Woochul", gender: "male", age: 5}
 ```
 
@@ -147,16 +147,16 @@ console.log(person);
 <hr>
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     first_name: "Woochul",
     gender: "male",
     age: 5
 };
 
-delete person.age;
+delete PERSON.age;
 
-console.log(person);
+console.log(PERSON);
 
 // {last_name: "Hyun", first_name: "Woochul", gender: "male"}
 ```
@@ -166,15 +166,15 @@ console.log(person);
 <hr>
 
 ```javascript
-const person = {
+const PERSON = {
     last_name: "Hyun",
     first_name: "Woochul",
     gender: "male"
 };
 
-console.log("last_name" in person); //true
-console.log("age" in person); // false
-console.log("toString" in person); // true
+console.log("last_name" in PERSON); //true
+console.log("age" in PERSON); // false
+console.log("toString" in PERSON); // true
 ```
 
 ### ES6
@@ -229,12 +229,12 @@ console.log(obj); // {1-1: 1, 1-2: 2}
 ```javascript
 // ES6
 
-const a = 1;
+const A = 1;
 let i = 0;
 
 let obj = {
-    [`${a}-${++i}`]: i,
-    [`${a}-${++i}`]: i
+    [`${A}-${++i}`]: i,
+    [`${A}-${++i}`]: i
 };
 
 console.log(obj); // {1-1: 1, 1-2: 2}
@@ -258,7 +258,7 @@ var obj = {
 ```javascript
 // ES6
 
-const obj = {
+const OBJ = {
     number: 1,
     plus3() {
         console.log(3 + this.number); // 4
