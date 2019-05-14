@@ -40,7 +40,11 @@
     -   [Operator](docs/JavaScript/operator.md)
     -   [Control statement](docs/JavaScript/control_statement.md)
     -   [Type Conversion](docs/JavaScript/type_conversion.md)
-    -   [Object literal](docs/JavaScript/object_literal.md)
+    -   [Function](docs/JavaScript/function.md)
+        -   [Function](docs/JavaScript/function_basic.md)
+    -   [Object](docs/JavaScript/object.md)
+        -   [Object literal](docs/JavaScript/object_literal.md)
+        -   [Pass By Value/Reference](docs/JavaScript/pass_by_value_reference.md)
 
 -   [Computer Science](docs/Computer_Science/index.md)
 
