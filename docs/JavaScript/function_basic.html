@@ -817,6 +817,240 @@
 <h3 id="function">Function</h3>
 <hr>
 
+<p>A function in a programming language is defined as a unit of execution by implementing a series of processes as statements and wrapping them in code blocks. Functions in the programming language also take input as functions of mathematics and make output. In this case, a variable receiving the input is called a parameter, an input is an argument, and an output is a return value. Also, since there may be several functions, you can use function names that are identifiers to distinguish specific functions.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// add is function name</span>
+<span class="hljs-comment">// x and y are parameters</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-comment">// x + y is return value</span>
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-comment">// 1 and 2 are arguments</span>
+add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+</code></pre>
+<p>Functions are created through Function Definition. Functions in JavaScript can be defined in a variety of ways.</p>
+<p>A function definition does not execute the function. To execute the function, you needed to pass an argument to the function through a parameter to instruct the execution of the function. This is called function call / invoke. When a function is called, the statements in the code block are executed in a lump and the result is returned.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-comment">// function call / invoke with arguments</span>
+add(<span class="hljs-number">1</span>, <span class="hljs-number">2</span>);
+</code></pre>
+<h3 id="function-literal">Function literal</h3>
+<hr>
+
+<p>Functions can be created as function literals. A function literal consists of a function keyword, a function name, a parameter list, and a function body.</p>
+<pre><code class="lang-javascript"><span class="hljs-comment">// ADD is variable name</span>
+<span class="hljs-comment">// add is function name</span>
+<span class="hljs-keyword">const</span> ADD = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+
+<span class="hljs-comment">// function add(x, y) {return x + y} is Function literal</span>
+</code></pre>
+<ul>
+<li>Function name</li>
+</ul>
+<p>The function name is an identifier. Therefore, identifier naming convention must follow.</p>
+<p>A function name is an identifier that can be referenced only within a function body.</p>
+<p>The function name can be omitted. A function with a function name is called a named function, and a function without a function name is called an anonymous function.</p>
+<ul>
+<li>Parameter list</li>
+</ul>
+<p>Wrap 0 or more parameters in parentheses and separate them with commas.</p>
+<p>Parameters are assigned arguments.</p>
+<p>Parameters are treated the same as variables in the function body.</p>
+<h3 id="four-ways-to-define-function">Four ways to define function</h3>
+<hr>
+
+<ul>
+<li>Function Declaration/Function Statement</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+</code></pre>
+<ul>
+<li>Function Expression</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+</code></pre>
+<ul>
+<li>Function Constructor (do not use)</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = <span class="hljs-keyword">new</span> <span class="hljs-built_in">Function</span>(<span class="hljs-string">&quot;x&quot;</span>, <span class="hljs-string">&quot;y&quot;</span>, <span class="hljs-string">&quot;return x + y&quot;</span>);
+</code></pre>
+<ul>
+<li>Arrow Function</li>
+</ul>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = (x, y) =&gt; x + y;
+</code></pre>
+<h3 id="function-declarationfunction-statement">Function Declaration/Function Statement</h3>
+<hr>
+
+<p>Function Declaration is the same as function literal notation. However, function declarations can not omit function names.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>Above, I wrote &quot;A function name is an identifier that can be referenced only within a function body.&quot;</p>
+<p>This means that the function name, add, can not be referenced outside the function body. In the above code, however, the function name is referenced outside the function body, even though it is an identifier that can not be referenced outside the function body.</p>
+<p>The JavaScript engine implicitly declares an identifier with the same name as the function name and assign the generated function object.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">var</span> add = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>The function is called with the variable pointing to the function object, not the function name. In other words, &quot;add&quot; that called the function is not a function name, but the variable &quot;add&quot; that JavaScript engine creates implicitly. Since the function name matches the variable name, it seems to be called by the function name, but it is actually called with the variable name.</p>
+<h3 id="function-expression">Function Expression</h3>
+<hr>
+
+<p>JavaScript functions are objects. An object in JavaScript can be assigned to a variable as like a value, the value of a property, or an element of an array. These objects are called first-class objects. Functions in JavaScript are first-class objects. When a function is a first-class object, it means that a function can be freely used as a value.</p>
+<p>Since functions are first-class objects, you can assign a function object created by a function literal to a variable. These function definition methods are called function expressions.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+
+<span class="hljs-built_in">console</span>.log(ADD(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>Function names of function literals can be omitted. These functions are called anonymous functions. Function literals in function expressions generally omit function names.</p>
+<p>As we have seen in the function declaration, when calling a function, you should use a variable that points to the function object, not the function name. A function can not be called by a function name because it is a valid identifier only within the function body.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">a</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+};
+
+<span class="hljs-built_in">console</span>.log(ADD(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+
+<span class="hljs-built_in">console</span>.log(a(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// ReferenceError: foo is not defined</span>
+</code></pre>
+<h3 id="arrow-function">Arrow function</h3>
+<hr>
+
+<p>Newly introduced in the ES6, the Arrow function can be declared in a simpler way using the arrow (=&gt;, Fat arrow) instead of the function keyword. An arrow function is always defined as an anonymous function.</p>
+<pre><code class="lang-javascript"><span class="hljs-keyword">const</span> ADD = (x, y) =&gt; x + y;
+
+<span class="hljs-built_in">console</span>.log(ADD(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>However, it is not designed to completely replace existing function declarations or function expressions. Therefore, you can not use the arrow function in all situations. Arrow function has different this binding method way, there is no prototype property, and no arguments object is created.</p>
+<h3 id="hoisting-function-declaration--function-expression">Hoisting (Function Declaration / Function Expression)</h3>
+<pre><code class="lang-javascript"><span class="hljs-built_in">console</span>.dir(add); <span class="hljs-comment">// &#x192; add(x, y)</span>
+<span class="hljs-built_in">console</span>.dir(pow); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+<span class="hljs-built_in">console</span>.log(pow(<span class="hljs-number">5</span>)); <span class="hljs-comment">// TypeError: sub is not a function</span>
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-keyword">let</span> pow = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x</span>) </span>{
+    <span class="hljs-keyword">return</span> x * x;
+};
+</code></pre>
+<p>A function defined by a function declaration statement can be called before the function declaration statement. However, functions defined by function expressions can not be called before function expressions. This is because the function defined by the function declaration and the function defined by the function expression are generated at different times.</p>
+<p>The function declaration statement process the declaration phase, the initialization phase, and the assign phase at the same time.</p>
+<p>The variable declaration of the function expression is executed before runtime and initialized to undefined, but not assign value yet.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">return</span> x + y;
+}
+
+<span class="hljs-keyword">let</span> pow;
+
+<span class="hljs-built_in">console</span>.dir(add); <span class="hljs-comment">// &#x192; add(x, y)</span>
+<span class="hljs-built_in">console</span>.dir(pow); <span class="hljs-comment">// undefined</span>
+
+<span class="hljs-built_in">console</span>.log(add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>)); <span class="hljs-comment">// 5</span>
+<span class="hljs-built_in">console</span>.log(pow(<span class="hljs-number">5</span>)); <span class="hljs-comment">// TypeError: sub is not a function</span>
+
+pow = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">x</span>) </span>{
+    <span class="hljs-keyword">return</span> x * x;
+};
+
+<span class="hljs-built_in">console</span>.log(pow(<span class="hljs-number">5</span>)); <span class="hljs-comment">// 25</span>
+</code></pre>
+<h3 id="arguments">arguments</h3>
+<hr>
+
+<p>If the number of arguments is less than the parameter, the omitted parameter is undefined.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x: &quot;</span> + x + <span class="hljs-string">&quot;, y: &quot;</span> + y);
+}
+
+f(<span class="hljs-number">2</span>); <span class="hljs-comment">// x: 2, y: undefined</span>
+</code></pre>
+<hr>
+
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>);
+    <span class="hljs-comment">// In browser, not in Node</span>
+    <span class="hljs-comment">// Arguments(2) [2, 3, callee: &#x192;, Symbol(Symbol.iterator): &#x192;]</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x: &quot;</span> + x + <span class="hljs-string">&quot;, y: &quot;</span> + y);
+}
+
+f(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">//x: 2, y: 3</span>
+</code></pre>
+<hr>
+
+<p>If the number of arguments are greater than the parameters, the excess arguments are ignored.</p>
+<p>But, the excess arguments are not just discarded. All arguments are implicitly stored in the properties of the arguments object.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-built_in">arguments</span>);
+    <span class="hljs-comment">// In browser, not in Node</span>
+    <span class="hljs-comment">// Arguments(3) [2, 3, 5, callee: &#x192;, Symbol(Symbol.iterator): &#x192;]</span>
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x: &quot;</span> + x + <span class="hljs-string">&quot;, y: &quot;</span> + y);
+}
+
+f(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>, <span class="hljs-number">5</span>); <span class="hljs-comment">//x: 2, y: 3</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">f</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>] = <span class="hljs-number">5</span>;
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">&quot;x: &quot;</span> + x + <span class="hljs-string">&quot;, y: &quot;</span> + y);
+}
+
+f(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// x: 2, y: 5</span>
+</code></pre>
+<h3 id="number-of-parameters">Number of parameters</h3>
+<hr>
+
+<p>Parameters are meaningful in order. Therefore, if the number of parameters increases, you must consider the order of the arguments to be passed when calling the function. This makes the function difficult to use and increases the chance of causing mistakes.</p>
+<p>Therefore, it is recommended that no more than 3 parameters be used. If more parameters are needed, it is advantageous to declare one parameter and pass the object as an argument.</p>
+<p>When you use an object as an argument, you do not have to worry about the order of the parameters if you specify exactly the property key. However, note that if you change the object passed from outside the function, the outside object also will be changed.</p>
+<h3 id="return">return</h3>
+<hr>
+
+<p>The function can return the execution result using the return keyword.</p>
+<p>The return statement returns the value specified after the return keyword. If you do not explicitly specify the return value after the return keyword, undefined is returned.</p>
+<p>Also, the function can omit the return statement. At this point, the function returns undefined implicitly.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">let</span> sum = x + y;
+}
+
+add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// undefined</span>
+</code></pre>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">let</span> sum = x + y;
+    <span class="hljs-keyword">return</span> sum;
+}
+
+add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 5</span>
+</code></pre>
+<p>The return statement make to stop the execution of the function and exits the function body. Therefore, if there is another statement after the return statement, the statement is not executed and is ignored.</p>
+<pre><code class="lang-javascript"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">add</span>(<span class="hljs-params">x, y</span>) </span>{
+    <span class="hljs-keyword">let</span> sum = x + y;
+    <span class="hljs-built_in">console</span>.log(sum); <span class="hljs-comment">// 5</span>
+    <span class="hljs-keyword">return</span> sum;
+    <span class="hljs-built_in">console</span>.log(sum); <span class="hljs-comment">// output nothing</span>
+}
+
+add(<span class="hljs-number">2</span>, <span class="hljs-number">3</span>); <span class="hljs-comment">// 5</span>
+</code></pre>
+
                                 
                                 </section>
                             
@@ -859,7 +1093,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.4.8.1","depth":3,"next":{"title":"Object","level":"1.4.9","depth":2,"path":"docs/JavaScript/object.md","ref":"docs/JavaScript/object.md","articles":[{"title":"Object literal","level":"1.4.9.1","depth":3,"path":"docs/JavaScript/object_literal.md","ref":"docs/JavaScript/object_literal.md","articles":[]},{"title":"Pass By Value/Reference","level":"1.4.9.2","depth":3,"path":"docs/JavaScript/pass_by_value_reference.md","ref":"docs/JavaScript/pass_by_value_reference.md","articles":[]}]},"previous":{"title":"Function","level":"1.4.8","depth":2,"path":"docs/JavaScript/function.md","ref":"docs/JavaScript/function.md","articles":[{"title":"Function","level":"1.4.8.1","depth":3,"path":"docs/JavaScript/function_basic.md","ref":"docs/JavaScript/function_basic.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/function_basic.md","mtime":"2019-05-14T08:50:36.632Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-14T08:50:41.636Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Function","level":"1.4.8.1","depth":3,"next":{"title":"Object","level":"1.4.9","depth":2,"path":"docs/JavaScript/object.md","ref":"docs/JavaScript/object.md","articles":[{"title":"Object literal","level":"1.4.9.1","depth":3,"path":"docs/JavaScript/object_literal.md","ref":"docs/JavaScript/object_literal.md","articles":[]},{"title":"Pass By Value/Reference","level":"1.4.9.2","depth":3,"path":"docs/JavaScript/pass_by_value_reference.md","ref":"docs/JavaScript/pass_by_value_reference.md","articles":[]}]},"previous":{"title":"Function","level":"1.4.8","depth":2,"path":"docs/JavaScript/function.md","ref":"docs/JavaScript/function.md","articles":[{"title":"Function","level":"1.4.8.1","depth":3,"path":"docs/JavaScript/function_basic.md","ref":"docs/JavaScript/function_basic.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-sharing","-fontsettings","toggle-chapters"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"sharing":{"facebook":false,"twitter":false,"google":false,"all":["facebook","google","twitter"]},"fontsettings":{"theme":"white","family":"sans","size":2},"toggle-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Woochul Hyun","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Web Development Book","language":"en, ko","links":{"sidebar":{"GitHub":"https://github.com/WooChulHyun"}},"gitbook":"*","description":"HTML CSS JS CS 정리"},"file":{"path":"docs/JavaScript/function_basic.md","mtime":"2019-05-14T12:28:19.145Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-05-14T12:28:25.992Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
